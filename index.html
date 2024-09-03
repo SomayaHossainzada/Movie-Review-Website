@@ -1,10 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
+
     <title>MOVIEFOREST</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <!-- Navbar Starts-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"
+              ><img src="img/logo.png" alt="logo" class="logo"
+            /></a>
+            <!-- Toggle btn -->
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Sidebar -->
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <!-- Sidebar Header -->
+              <div class="offcanvas-header border-bottom">
+                <img
+                  src="img/logo.png"
+                  alt="logo"
+                  class="logo"
+                  id="offcanvasNavbarLabel"
+                />
+                <button
+                  type="button"
+                  class="btn-close btn-close-white shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Sidebar Body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+                <ul
+                  class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+                >
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">CATALOG</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">PRICING PLAN</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">CONTACT US</a>
+                  </li>
+                </ul>
+                <!-- Login / Sign up -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                >
+                  <a href="#" class="login-btn">LOG IN</a>
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2">SIGN UP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar ends -->
+        <!-- Search Bar Start -->
+        <div class="searchbar-container">
+          <div class="search-bar">
+            <!-- Dropdown starts -->
+            <div class="dropdwon">
+              <div id="drop-text" class="dropdown-text">
+                <span id="drop-keyword">Release Year</span>
+                <i id="drop-icon" class="fa-solid fa-chevron-down"></i>
+              </div>
+              <ul id="drop-list" class="dropdown-list">
+                <li class="dropdown-list-item">Release Year</li>
+                <li class="dropdown-list-item">Title</li>
+                <li class="dropdown-list-item">Genre</li>
+              </ul>
+            </div>
+
+            <!-- Dropdown ends -->
+
+            <!-- Search box input starts -->
+            <div class="search-box">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search for a movie | TV Show you are looking for"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Search box input ends -->
+          </div>
+        </div>
+        <!-- Search bar ends -->
+      </header>
+
+      <section class="hero-section">slider & social media box</section>
+    </main>
+    <footer></footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
