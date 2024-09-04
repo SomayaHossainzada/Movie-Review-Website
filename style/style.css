@@ -27,8 +27,12 @@ header {
 }
 .navbar {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   transition: all 0.5s;
+}
+.nav-container {
+  width: 90%;
+  margin: auto;
 }
 .navbar-scrolled {
   background-color: #0f2133;
