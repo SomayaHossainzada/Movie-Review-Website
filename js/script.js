@@ -1,9 +1,9 @@
 //Navbar Scrolling
 const stickyNav = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 120) {
+  if (window.scrollY >= 40) {
     stickyNav.classList.add("navbar-scrolled");
-  } else if (window.scrollY < 120) {
+  } else if (window.scrollY < 40) {
     stickyNav.classList.remove("navbar-scrolled");
   }
 });
@@ -48,3 +48,28 @@ for (item of dropListItems) {
     searchInput.placeholder = "Search in " + e.target.innerText + "...";
   };
 }
+
+//Carousel Hero Section ---Home Page
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true, // Pause on mouse hover
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+    slideBy: 4, // Number of items to slide at once
+  });
+});
