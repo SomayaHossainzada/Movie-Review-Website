@@ -12,6 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Bootstrap Css Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Bootstrap Css CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -46,7 +48,7 @@
       <header>
         <!-- Navbar Starts-->
         <nav class="navbar navbar-expand-lg fixed-top">
-          <div class="container-fluid nav-container">
+          <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#"
               ><img src="img/logo.png" alt="logo" class="logo"
@@ -121,7 +123,7 @@
         <!-- Navbar ends -->
         <!-- Search Bar Start -->
         <div class="searchbar-container">
-          <div class="search-bar">
+          <div class="search-bar container">
             <!-- Dropdown starts -->
             <div class="dropdwon">
               <div id="drop-text" class="dropdown-text">
@@ -154,14 +156,14 @@
       </header>
 
       <section class="hero-section">
-        <div class="social-box">
+        <div class="social-box container">
           <p>FOLLOWS US:</p>
           <i class="fa-brands fa-facebook-f social-icon"></i>
           <i class="fa-brands fa-x-twitter social-icon"></i>
           <i class="fa-brands fa-youtube social-icon"></i>
         </div>
         <!-- Owl Carousel -->
-        <div class="container-fluid main-carousel">
+        <div class="container main-carousel">
           <div class="row">
             <div class="owl-carousel owl-theme">
               <!-- item1 -->
@@ -277,9 +279,1087 @@
           </div>
         </div>
       </section>
-      <section class="movies-series-section"></section>
+
+      <section class="movies-series-section">
+        <div class="movies-container container">
+          <h2>Movies</h2>
+          <!-- movies section tabs -->
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active movie-tab-btn"
+                id="pills-popular-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-popular"
+                type="button"
+                role="tab"
+                aria-controls="pills-popular"
+                aria-selected="true"
+              >
+                #POPULAR
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-comming-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-comming"
+                type="button"
+                role="tab"
+                aria-controls="pills-comming"
+                aria-selected="false"
+              >
+                #COMING SOON
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-top-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-top"
+                type="button"
+                role="tab"
+                aria-controls="pills-top"
+                aria-selected="false"
+              >
+                #TOP RATED
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-review-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-review"
+                type="button"
+                role="tab"
+                aria-controls="pills-review"
+                aria-selected="false"
+              >
+                #MOST REVIEWED
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-popular"
+              role="tabpanel"
+              aria-labelledby="pills-popular-tab"
+              tabindex="0"
+            >
+              <!-- Popular Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item4.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item5.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item10.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item11.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item12.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 8 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 9 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 10 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of popular movie carousel -->
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="pills-comming"
+              role="tabpanel"
+              aria-labelledby="pills-comming-tab"
+              tabindex="0"
+            >
+              <!-- Comming Soon Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item 1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item9.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Comming Soon Movie Carousel -->
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-top"
+              role="tabpanel"
+              aria-labelledby="pills-top-tab"
+              tabindex="0"
+            >
+              <!-- Top Rated Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item4.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item5.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item11.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 8 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Top Rated Movie Carousel -->
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-review"
+              role="tabpanel"
+              aria-labelledby="pills-review-tab"
+              tabindex="0"
+            >
+              <!-- Most Review Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item4.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item5.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item10.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item11.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Most Review Movie Carousel -->
+            </div>
+          </div>
+        </div>
+        <!-- Series -->
+        <div class="series-container container">
+          <h2>Series</h2>
+          <!-- series section tabs -->
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active movie-tab-btn"
+                id="pills-popular-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-popular"
+                type="button"
+                role="tab"
+                aria-controls="pills-popular"
+                aria-selected="true"
+              >
+                #POPULAR
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-comming-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-comming"
+                type="button"
+                role="tab"
+                aria-controls="pills-comming"
+                aria-selected="false"
+              >
+                #COMING SOON
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-top-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-top"
+                type="button"
+                role="tab"
+                aria-controls="pills-top"
+                aria-selected="false"
+              >
+                #TOP RATED
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link movie-tab-btn"
+                id="pills-review-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-review"
+                type="button"
+                role="tab"
+                aria-controls="pills-review"
+                aria-selected="false"
+              >
+                #MOST REVIEWED
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-popular"
+              role="tabpanel"
+              aria-labelledby="pills-popular-tab"
+              tabindex="0"
+            >
+              <!-- Popular Series Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item9.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item7.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item12.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 8 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 9 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 10 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of popular movie carousel -->
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="pills-comming"
+              role="tabpanel"
+              aria-labelledby="pills-comming-tab"
+              tabindex="0"
+            >
+              <!-- Comming Soon Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item 1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item9.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Comming Soon Movie Carousel -->
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-top"
+              role="tabpanel"
+              aria-labelledby="pills-top-tab"
+              tabindex="0"
+            >
+              <!-- Top Rated Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item4.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item5.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item11.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider2.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 7 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider3.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 8 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/slider4.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Top Rated Movie Carousel -->
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-review"
+              role="tabpanel"
+              aria-labelledby="pills-review-tab"
+              tabindex="0"
+            >
+              <!-- Most Review Moview Owl Carousel -->
+              <div class="container movie-series-carousel">
+                <div class="row">
+                  <div class="owl-carousel movie-carousel owl-theme">
+                    <!-- item1 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item4.jpg" class="card-img-top" />
+
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item2 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item1.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item2">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item5.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item3">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item10.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item4">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="card item card-carousel-box ms-2">
+                      <img src="img/mv-item11.jpg" class="card-img-top" />
+                      <div class="movie-info">
+                        <div class="btn px-3 py-1 rounded-2 btn-item1">
+                          Action
+                        </div>
+                        <h4 class="mt-2">Interstellar</h4>
+                        <p><i class="fa-solid fa-star"></i> 7.4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Most Review Movie Carousel -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="top-rated-section">Top Rated</section>
+
+      <!-- Pricing Plan Section -->
+      <section class="pricing-plan-section">
+        <div class="container">
+          <h2>Select your plan</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card pirce-plan-box">
+                    <div class="price-box-title">
+                        <h3>Basic</h3>
+                        <p class="basic-box-subtitle text-end">Free</p>
+                    </div>
+                    <div class="price-box-body">
+                        <div>
+                            <ul>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>7 days</li>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>720p Resolution</li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Availability</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Desktop Only</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Support</span></li>        
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-basic-price col-12 mt-sm-4 rounded-2 px-4 py-2">REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box">
+                <div class="price-box-title">
+                    <h3>Premium</h3>
+                    <p class="premium-box-subtitle text-end"><span>$34.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>1 Month</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Full HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">TV & Desktop</span></li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">24/7 Support</span></li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-premium-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box">
+                <div class="price-box-title">
+                    <h3>Cinematic</h3>
+                    <p class="cinematic-box-subtitle text-end"><span>$49.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>2 Months</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Ultra HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Any Device</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>24/7 Support</li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-cinematic-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+        
+      </section>
     </main>
-    <footer></footer>
+
+    <footer>
+      <div class="footer-links">
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-12 col-md-4 col-quick-links links1">
+              
+                <img src="img/logo.png" alt="logo" class="footer-logo" />
+                <div class="footer-social-box mt-3 ms-md-2">
+                  <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+                </div>
+              </div>
+           
+            <div class="col-xs-12 col-md-4 col-quick-links links2">
+              <h4>Get in touch</h4>
+              <ul class="ms-md-3">
+                <li class="my-2">
+                  <i class="fa-solid fa-location-dot me-3"></i><span>Afghanistan, Herat</span>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-phone me-5"><span class="ms-2">+ 97533322</span></i>
+                </li>
+                <li class="my-2"><i class="fa-solid fa-envelope me-3"></i><apan>movieforest@gmail.com</apan></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links3">
+              <h4>Quick Links</h4>
+              <ul class="me-md-4">
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Home</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Catalog</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="footer-copy-right"> 
+        <div class="container">
+          <div class="row">
+          <div class="col">
+            <p>© Copyright All Rights Reserved</p>
+          </div>
+        </div> 
+      </div>
+       
+      </div> 
+    </footer>
     <!-- Bootstrap Js CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 main {
@@ -30,10 +31,7 @@ header {
   width: 100%;
   transition: all 0.5s;
 }
-.nav-container {
-  width: 90%;
-  margin: auto;
-}
+
 .navbar-scrolled {
   background-color: #0f2133;
 }
@@ -62,6 +60,9 @@ header {
   border: 2px solid #dd003f;
   color: #dd003f;
 }
+/* .navbar-toggler-icon {
+  color: #fff !important;
+} */
 
 /* Searchbar */
 .searchbar-container {
@@ -160,14 +161,11 @@ header {
 
 /* Social box */
 .social-box {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   gap: 10px;
   color: #fff;
   justify-content: end;
   align-items: baseline;
-  padding: 0 12px;
 }
 .social-box p {
   font-size: 14px;
@@ -179,7 +177,8 @@ header {
 }
 
 /* Owl Carousel */
-.main-carousel {
+.main-carousel,
+.movie-series-carousel {
   margin-top: 1rem;
   width: 90%;
   margin-bottom: 60px;
@@ -248,5 +247,183 @@ header {
 /* Movies Series Section */
 .movies-series-section {
   background-color: #020d18;
+}
+
+.movies-container {
+  padding-top: 50px;
+  padding-bottom: 16px;
+}
+.series-container {
+  padding-bottom: 50px;
+}
+
+/* Movie Tabs */
+.movie-tab-btn {
+  background-color: transparent !important;
+  font-size: 16px !important;
+}
+.nav-pills {
+  margin-left: -1rem;
+}
+/* Top Rated Section */
+.top-rated-section {
+  background-color: #06121e;
   height: 800px;
+}
+/* Pricing Plan Section */
+.pricing-plan-section {
+  background-color: #020d18;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.pirce-plan-box {
+  background-color: transparent;
+  border: 3px solid #4280bf;
+  margin: 45px 0 40px 0;
+  padding: 2rem 1.5rem;
+}
+.basic-box-subtitle {
+  color: #dcf836;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.price-box-body ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.check-icon {
+  color: #38c657;
+}
+.grey-icon,
+.grey-text {
+  color: #abb7c4;
+}
+.premium-box-subtitle {
+  color: #dd003f;
+  font-size: 1.8rem;
+}
+.premium-box-subtitle span {
+  color: #dd003f;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.cinematic-box-subtitle {
+  color: #eeac04;
+  font-size: 1.8rem;
+}
+.cinematic-box-subtitle span {
+  color: #eeac04;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.btn-basic-price {
+  border: 2px solid #dcf836;
+  color: #fff;
+}
+.btn-basic-price:hover {
+  background-color: #b4d303;
+  font-weight: bold;
+}
+.btn-premium-price {
+  border: 2px solid #dd003f;
+  color: #fff;
+}
+.btn-premium-price:hover {
+  background-color: #dd003f;
+  font-weight: bold;
+}
+.btn-cinematic-price {
+  border: 2px solid #eeac04;
+  color: #fff;
+}
+.btn-cinematic-price:hover {
+  background-color: #eeac04;
+  font-weight: bold;
+}
+
+/* Footer Section */
+
+.footer-links {
+  background-image: url(../img/slider-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .col-quick-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .links1 {
+    align-items: start;
+    justify-content: center;
+  }
+  .links2 {
+    align-items: center;
+    justify-content: center;
+  }
+  .links3 {
+    align-items: end;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .col-quick-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .links1 {
+    align-items: center;
+    justify-content: center;
+  }
+  .links2 {
+    align-items: center;
+    justify-content: center;
+  }
+  .links3 {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo {
+    margin-top: 20px;
+  }
+  .footer-social-box {
+    margin-bottom: 10px;
+  }
+}
+
+.footer-logo {
+  width: 140px;
+  height: auto;
+}
+.footer-social-box {
+  font-size: 18px;
+}
+.col-quick-links h4 {
+  font-size: 20px;
+  color: #4280bf;
+  margin: 10px 0;
+}
+.col-quick-links ul {
+  list-style-type: none;
+}
+.col-quick-links ul li {
+  font-size: 12px;
+}
+.col-quick-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-copy-right {
+  background-color: #06121e;
+  border-top: 1px solid #abb7c4;
+  padding: 20px 0 0 0;
+}
+.footer-copy-right p {
+  color: #abb7c4 !important;
+  font-size: 0.8rem;
+  text-align: center;
 }

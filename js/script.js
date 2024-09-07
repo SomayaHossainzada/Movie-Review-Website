@@ -73,3 +73,22 @@ $(document).ready(function () {
     slideBy: 4, // Number of items to slide at once
   });
 });
+
+// Movie & Series Section --- Owl Carousel
+$(".movie-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
+});
