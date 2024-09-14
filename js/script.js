@@ -92,3 +92,133 @@ $(".movie-carousel").owlCarousel({
     },
   },
 });
+
+//Top Rated Section
+// const tab = document.querySelector(".vs-tabs");
+// const badges = tab.querySelectorAll(".vs-tab");
+// const icons = document.querySelectorAll(".vs-icon span");
+
+// // Event listener for tab clicks
+// badges.forEach((badge) => {
+//   badge.addEventListener("click", () => {
+//     tab.querySelector(".vs-tab-active").classList.remove("vs-tab-active");
+//     badge.classList.add("vs-tab-active");
+
+//     badge.scrollIntoView({
+//       block: "center",
+//       behavior: "smooth",
+//     });
+//   });
+// });
+
+// // Event listener for arrow clicks
+// icons.forEach((icon) => {
+//   icon.addEventListener("click", () => {
+//     tab.scrollTop += icon.classList.contains("vs-bottom-arrow") ? 100 : -100; // Scroll up or down
+//     updateIcons(); // Update arrow visibility after scrolling
+//   });
+// });
+
+// // Update arrow visibility based on scroll position
+// function updateIcons() {
+//   const scrolled_height = tab.scrollTop;
+//   icons[0].parentElement.classList.toggle(
+//     "vs-icon-hide",
+//     scrolled_height === 0
+//   ); // Hide up arrow if at top
+//   icons[1].parentElement.classList.toggle(
+//     "vs-icon-hide",
+//     tab.scrollHeight - (tab.clientHeight + scrolled_height) <= 0 // Hide down arrow if at bottom
+//   );
+// }
+
+// // Initial visibility check
+// updateIcons();
+
+// // Scroll event to update arrows
+// tab.addEventListener("scroll", updateIcons);
+//version 3
+
+// const tab = document.querySelector(".vs-tabs");
+// const badges = tab.querySelectorAll(".vs-tab");
+// const icons = document.querySelectorAll(".vs-icon span");
+// const { clientHeight, scrollHeight } = tab;
+
+// // Event listener for tab clicks
+// badges.forEach((badge) => {
+//   badge.addEventListener("click", () => {
+//     tab.querySelector(".vs-tab-active").classList.remove("vs-tab-active");
+//     badge.classList.add("vs-tab-active");
+
+//     badge.scrollIntoView({
+//       block: "center", // Center the active tab vertically
+//       behavior: "smooth",
+//     });
+//   });
+// });
+
+// // Event listener for arrow clicks
+// icons.forEach((icon) => {
+//   icon.addEventListener("click", () => {
+//     tab.scrollTop += icon.classList.contains("vs-bottom-arrow") ? 100 : -100; // Scroll up or down
+//     updateIcons(); // Update arrow visibility after scrolling
+//   });
+// });
+
+// // Update arrow visibility based on scroll position
+// function updateIcons() {
+//   const scrolled_height = tab.scrollTop;
+//   icons[0].parentElement.classList.toggle("vs-icon-hide", scrolled_height <= 1); // Hide up arrow if at top
+//   icons[1].parentElement.classList.toggle(
+//     "vs-icon-hide",
+//     scrollHeight - (clientHeight + scrolled_height) <= 1 // Hide down arrow if at bottom
+//   );
+// }
+
+// // Initial visibility check
+// updateIcons();
+
+// // Scroll event to update arrows
+// tab.addEventListener("scroll", updateIcons);
+
+//version2:
+
+// const tab = document.querySelector(".vs-tabs"),
+//   badges = tab.querySelectorAll(".vs-tab"),
+//   icons = document.querySelectorAll(".vs-icon span"),
+//   { clientWidth, scrollWidth } = tab;
+
+// badges.forEach((badge) => {
+//   badge.addEventListener("click", () => {
+//     tab.querySelector(".vs-tab-active").classList.remove("vs-tab-active");
+//     badge.classList.add("vs-tab-active");
+
+//     // badge.scrollIntoView({
+//     //   inline: "center",
+//     // });
+//   });
+// });
+
+// icons.forEach((icon) => {
+//   icon.addEventListener("click", () => {
+//     tab.style = "";
+//     tab.scrollTop += icon.classList.contains("vs-top-arrow") ? 300 : -300;
+//   });
+// });
+
+// tab.addEventListener("scroll", (e) => {
+//   updateIcons(e.target.scrollTop);
+// });
+
+// tab.addEventListener("wheel", (e) => {
+//   tab.style.scrollBehavior = "auto";
+//   tab.scrollTop += e.deltaX;
+// });
+
+// function updateIcons(scrolled_width) {
+//   icons[0].parentElement.classList.toggle("hide", scrolled_width <= 1);
+//   icons[1].parentElement.classList.toggle(
+//     "vs-icon-hide",
+//     scrollWidth - (clientWidth + scrolled_width) <= 1
+//   );
+// }

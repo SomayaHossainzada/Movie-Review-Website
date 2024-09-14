@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Css Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap Css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Carousel Css min link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Carousel theme default link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>MOVIEFOREST</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <!-- Navbar Starts-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"
+              ><img src="img/logo.png" alt="logo" class="logo"
+            /></a>
+            <!-- Toggle btn -->
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Sidebar -->
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <!-- Sidebar Header -->
+              <div class="offcanvas-header border-bottom">
+                <img
+                  src="img/logo.png"
+                  alt="logo"
+                  class="logo"
+                  id="offcanvasNavbarLabel"
+                />
+                <button
+                  type="button"
+                  class="btn-close btn-close-white shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Sidebar Body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+                <ul
+                  class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+                >
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="catalog.html">CATALOG</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" href="pricing-plan.html">PRICING PLAN</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                  </li>
+                </ul>
+                <!-- Login / Sign up -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                >
+                  <a href="#" class="login-btn">LOG IN</a>
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2">SIGN UP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar ends -->
+        
+      </header>
+
+      <!-- <section class="hero-section">
+      </section> -->
+        <!-- Pricing Plan Section -->
+      <section class="hero-section pricing-container" >
+        <div class="container">
+          <h2>Select your plan</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card pirce-plan-box price-card">
+                    <div class="price-box-title">
+                        <h3>Basic</h3>
+                        <p class="basic-box-subtitle text-end">Free</p>
+                    </div>
+                    <div class="price-box-body">
+                        <div>
+                            <ul>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>7 days</li>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>720p Resolution</li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Availability</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Desktop Only</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Support</span></li>        
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-basic-price col-12 mt-sm-4 rounded-2 px-4 py-2">REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box price-card">
+                <div class="price-box-title">
+                    <h3>Premium</h3>
+                    <p class="premium-box-subtitle text-end"><span>$34.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>1 Month</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Full HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">TV & Desktop</span></li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">24/7 Support</span></li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-premium-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box price-card">
+                <div class="price-box-title">
+                    <h3>Cinematic</h3>
+                    <p class="cinematic-box-subtitle text-end"><span>$49.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>2 Months</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Ultra HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Any Device</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>24/7 Support</li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-cinematic-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+        
+      </section>
+      <section class="features-section ">
+        <div class="container">
+          
+              <h2 class="features-title">Our Features</h2>
+              <p class="features-desc">Welcome to MovieForest site, the ultimate destination for all film enthusiasts. Immerse yourself in a world of captivating stories, stunning visuals, and unforgettable performances. Explore our extensive library of movies, spanning across genres, eras, and cultures.</p>
+            
+          <div class="row">
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="bi bi-badge-hd feature-icon icon-item1"></i>
+              <h4 class="feature-item-title">Ultra HD</h4>
+              <p class="feature-item-desc">
+                Experience movies like never before with our Ultra HD feature. Immerse yourself in stunning visuals, vibrant colors, and crystal-clear detail.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="bi bi-film feature-icon icon-item2"></i>
+              <h4 class="feature-item-title">Large movie database</h4>
+              <p class="feature-item-desc">
+                Discover a vast and diverse collection of movies in our extensive database. With thousands of titles to choose from, you'll never run out of options.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="fa-solid fa-tv feature-icon icon-item3"></i>
+              <h4 class="feature-item-title">Online TV</h4>
+              <p class="feature-item-desc">
+                Expand your entertainment horizons with our Online TV. Stream live TV channels, catch up on your favorite shows, and enjoy a wide range of television content online.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="bi bi-ticket-perforated feature-icon icon-item4"></i>
+              <h4 class="feature-item-title">Early access to new items</h4>
+              <p class="feature-item-desc">
+                Be the first to experience the latest movies and exclusive content with our Early Access feature. Get a sneak peek into upcoming releases, gain access to special screenings, and stay ahead of the curve.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="fa-brands fa-chromecast feature-icon icon-item5"></i>
+              <h4 class="feature-item-title">Airplay</h4>
+              <p class="feature-item-desc">
+                Seamlessly stream movies from your device to the big screen with Airplay integration. Experience the cinematic magic in the comfort of your living room and share the excitement with friends and family.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-4 feature-item my-2">
+              <i class="bi bi-translate feature-icon icon-item6"></i>
+              <h4 class="feature-item-title">Multi language subtitles</h4>
+              <p class="feature-item-desc">
+                Break language barriers and enjoy movies from around the world with our multi-language subtitles. Explore different cultures, expand your cinematic horizons, and appreciate the beauty of global cinema.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <section class="partners-section">
+        <div class="container">
+          <h2 class="partners-title">Our Partners</h2>
+          <p class="partners-desc">
+            We strive for long-term cooperation with our partners, and our team is always ready to meet and consider new opportunities for mutual benefits. If you would like to become our partner, we are always open to new offers and look forward to hearing from you.
+          </p>
+
+          <div class="row">
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner1.png"alt="partner1" class="partner-img">
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner2.png"alt="partner2" class="partner-img">
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner3.png"alt="partner3" class="partner-img">
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner4.png"alt="partner4" class="partner-img">
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner5.png"alt="partner5" class="partner-img">
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <img src="img/partner6.png"alt="partner6" class="partner-img">
+            </div>
+
+          </div>
+        </div>
+      </section>
+        
+
+      
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-12 col-md-4 col-quick-links links1">
+              
+                <img src="img/logo.png" alt="logo" class="footer-logo" />
+                <div class="footer-social-box mt-3 ms-md-2">
+                  <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+                </div>
+              </div>
+           
+            <div class="col-xs-12 col-md-4 col-quick-links links2">
+              <h4>Get in touch</h4>
+              <ul class="ms-md-3">
+                <li class="my-2">
+                  <i class="fa-solid fa-location-dot me-3"></i><span>Afghanistan, Herat</span>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-phone me-5"><span class="ms-2">+ 97533322</span></i>
+                </li>
+                <li class="my-2"><i class="fa-solid fa-envelope me-3"></i><apan>movieforest@gmail.com</apan></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links3">
+              <h4>Quick Links</h4>
+              <ul class="me-md-4">
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Home</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Catalog</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="footer-copy-right"> 
+        <div class="container">
+          <div class="row">
+          <div class="col">
+            <p>© Copyright All Rights Reserved</p>
+          </div>
+        </div> 
+      </div>
+       
+      </div> 
+    </footer>
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Js Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

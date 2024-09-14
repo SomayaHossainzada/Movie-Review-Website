@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Css Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap Css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Carousel Css min link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Carousel theme default link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>MOVIEFOREST</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <!-- Navbar Starts-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"
+              ><img src="img/logo.png" alt="logo" class="logo"
+            /></a>
+            <!-- Toggle btn -->
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Sidebar -->
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <!-- Sidebar Header -->
+              <div class="offcanvas-header border-bottom">
+                <img
+                  src="img/logo.png"
+                  alt="logo"
+                  class="logo"
+                  id="offcanvasNavbarLabel"
+                />
+                <button
+                  type="button"
+                  class="btn-close btn-close-white shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Sidebar Body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+                <ul
+                  class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+                >
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="catalog.html">CATALOG</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="pricing-plan.html"
+                      >PRICING PLAN</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" href="about-us.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                  </li>
+                </ul>
+                <!-- Login / Sign up -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                >
+                  <a href="#" class="login-btn">LOG IN</a>
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2">SIGN UP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar ends -->
+      </header>
+
+      <section class="header-section"></section>
+      <!-- About Start -->
+      <section class="about-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left">
+                <div style="z-index: 999">
+                  <img
+                    src="img/about.jpg"
+                    alt="about image"
+                    class="about-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 ps-2">
+              <div class="about-right">
+                <h3 class="about-title">About Us</h3>
+                <span class="about-subtitle">
+                  We are the best pick for your hassle free
+                  streaming experience.
+                </span>
+                <p class="about-detail">
+                  There are many variations of passages available but the
+                  majority have suffered alteration in some form by injected
+                  humour randomised words which don't look even slightly
+                  believable. If you are going to use passage you need sure
+                  there anything embarrassing first true generator on the
+                  Internet.
+                </p>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="about-item-icon pe-3">
+                      <img src="img/Icon/video1.png" alt="about item icon" />
+                    </div>
+                    <div class="about-item-content">
+                      <h5 class="about-item-title">Highly Rated & Esteemed</h5>
+                      <p class="about-item-detail">
+                        It is a long fact that a reader will be distracted.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="about-item-icon pe-3">
+                      <img src="img/Icon/monitor1.png" alt="about item icon" />
+                    </div>
+                    <div class="about-item-content">
+                      <h5 calss="about-item-title">
+                        Full Customer Satisfaction
+                      </h5>
+                      <p class="about-item-detail">
+                        It is a long fact that a reader will be distracted.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About End -->
+      <!-- Counter Area Start -->
+      <section class="counter-area-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="counter-box">
+                <div class="counter-icon">
+                  <img src="img/Icon/video2.png" alt="counter icon" />
+                </div>
+                <div class="counter-content">
+                  <sapn class="counter">900</sapn>
+                  <h5 class="counter-title">+Total Movies</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="counter-box">
+                <div class="counter-icon">
+                  <img src="img/Icon/review1.png" alt="counter icon" />
+                </div>
+                <div class="counter-content">
+                  <sapn class="counter">2500</sapn>
+                  <h5 class="counter-title">+Happy Clients</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="counter-box">
+                <div class="counter-icon">
+                  <img src="img/Icon/self-employed1.png" alt="counter icon" />
+                </div>
+                <div class="counter-content">
+                  <sapn class="counter">300</sapn>
+                  <h5 class="counter-title">+Team Workers</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="counter-box">
+                <div class="counter-icon">
+                  <img src="img/Icon/badge1.png" alt="counter icon" />
+                </div>
+                <div class="counter-content">
+                  <sapn class="counter">30</sapn>
+                  <h5 class="counter-title">+Award Wining</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Counter Area End -->
+      <!-- Process Area Start -->
+      <section class="process-area-section">
+        <div class="container">
+          <span class="process-subtitle">Process</span>
+          <h3 class="process-title">How It Works</h3>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="process-item">
+                <span>01</span>
+                <div class="process-icon">
+                  <img src="img/Icon/monitor 2.png" alt="process icon" />
+                </div>
+                <h5>Create An Account</h5>
+                <p>
+                  It is a long established fact that a reader will be
+                  distracted.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="process-item">
+                <span>02</span>
+                <div class="process-icon">
+                  <img src="img/Icon/video3.png" alt="process icon" />
+                </div>
+                <h5>Choose Your Plan</h5>
+                <p>
+                  It is a long established fact that a reader will be
+                  distracted.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="process-item">
+                <span>03</span>
+                <div class="process-icon">
+                  <img
+                    src="img/Icon/online-streaming2.png"
+                    alt="process icon"
+                  />
+                </div>
+                <h5>Find Your Movie</h5>
+                <p>
+                  It is a long established fact that a reader will be
+                  distracted.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="process-item">
+                <span>04</span>
+                <div class="process-icon">
+                  <img src="img/icon/video-player1.png" alt="process icon" />
+                </div>
+                <h5>Enjoy Your Movie</h5>
+                <p>
+                  It is a long established fact that a reader will be
+                  distracted.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process Area End -->
+      <!-- Choose Us Start -->
+      <section class="choose-us-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="choose-left">
+                <span class="choose-us-title">Why Choose Us</span>
+                <h3 class="choose-us-subtitle">
+                  We Care About Our Customers  Satisfaction
+                </h3>
+                <p class="choose-us-desc">
+                  There are many variations of passages available but the
+                  majority have suffered alteration in some form by injected
+                  humour randomised words which don't look even tend to repeat
+                  predefined slightly believable
+                </p>
+                <div class="choose-item">
+                  <div class="choose-icon">
+                    <img
+                      src="img/Icon/online-streaming2.png"
+                      alt="choose icon"
+                    />
+                  </div>
+                  <div class="choose-content">
+                    <h5>Best Streaming Platform</h5>
+                    <p>
+                      There are many variations of passages available the
+                      majority have suffered alteration injected humour.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="choose-item">
+                  <div class="choose-icon">
+                    <img src="img/Icon/video-player1.png" alt="choose icon" />
+                  </div>
+                  <div class="choose-content">
+                    <h5>Best Streaming Platform</h5>
+                    <p>
+                      There are many variations of passages available the
+                      majority have suffered alteration injected humour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="choose-right">
+                <img src="img/about2.jpg" alt="choose us image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Choose Us End -->
+      <!-- Our Team Start -->
+      <section class="team-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="team-item">
+                <div class="team-img">
+                  <img src="img/team-member1.jpg" alt="team image" />
+                </div>
+                <div class="team-info">
+                  <h5>Angela Vigil</h5>
+                  <span>Engineer</span>
+                </div>
+                <div class="team-social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="team-item">
+                <div class="team-img">
+                  <img src="img/team-member2.jpg" alt="team image" />
+                </div>
+                <div class="team-info">
+                  <h5>Frank Mitchel</h5>
+                  <span>Engineer</span>
+                </div>
+                <div class="team-social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="team-item">
+                <div class="team-img">
+                  <img src="img/team-member3.jpg" alt="team image" />
+                </div>
+                <div class="team-info">
+                  <h5>Susan Lunsford</h5>
+                  <span>Engineer</span>
+                </div>
+                <div class="team-social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="team-item">
+                <div class="team-img">
+                  <img src="img/team-member4.jpg" alt="team image" />
+                </div>
+                <div class="team-info">
+                  <h5>Dennis Pruitt</h5>
+                  <span>Engineer</span>
+                </div>
+                <div class="team-social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-quick-links links1">
+              <img src="img/logo.png" alt="logo" class="footer-logo" />
+              <div class="footer-social-box mt-3 ms-md-2">
+                <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links2">
+              <h4>Get in touch</h4>
+              <ul class="ms-md-3">
+                <li class="my-2">
+                  <i class="fa-solid fa-location-dot me-3"></i
+                  ><span>Afghanistan, Herat</span>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-phone me-5"
+                    ><span class="ms-2">+ 97533322</span></i
+                  >
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-envelope me-3"></i
+                  ><apan>movieforest@gmail.com</apan>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links3">
+              <h4>Quick Links</h4>
+              <ul class="me-md-4">
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Home</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Catalog</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copy-right">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>© Copyright All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Js Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

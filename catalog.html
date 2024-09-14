@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Css Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap Css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Carousel Css min link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Carousel theme default link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>MOVIEFOREST</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <!-- Navbar Starts-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"
+              ><img src="img/logo.png" alt="logo" class="logo"
+            /></a>
+            <!-- Toggle btn -->
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Sidebar -->
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <!-- Sidebar Header -->
+              <div class="offcanvas-header border-bottom">
+                <img
+                  src="img/logo.png"
+                  alt="logo"
+                  class="logo"
+                  id="offcanvasNavbarLabel"
+                />
+                <button
+                  type="button"
+                  class="btn-close btn-close-white shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Sidebar Body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+                <ul
+                  class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+                >
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" href="catalog.html">CATALOG</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="pricing-plan.html"
+                      >PRICING PLAN</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                  </li>
+                </ul>
+                <!-- Login / Sign up -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                >
+                  <a href="#" class="login-btn">LOG IN</a>
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2">SIGN UP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar ends -->
+        <!-- Search Bar Start -->
+        <div class="searchbar-container">
+          <div class="search-bar container">
+            <!-- Dropdown starts -->
+            <div class="dropdwon">
+              <div id="drop-text" class="dropdown-text">
+                <span id="drop-keyword">Release Year</span>
+                <i id="drop-icon" class="fa-solid fa-chevron-down"></i>
+              </div>
+              <ul id="drop-list" class="dropdown-list">
+                <li class="dropdown-list-item">Release Year</li>
+                <li class="dropdown-list-item">Title</li>
+                <li class="dropdown-list-item">Genre</li>
+              </ul>
+            </div>
+
+            <!-- Dropdown ends -->
+
+            <!-- Search box input starts -->
+            <div class="search-box">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search for a movie | TV Show you are looking for"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Search box input ends -->
+          </div>
+        </div>
+        <!-- Search bar ends -->
+      </header>
+
+      <section class="header-section">
+        <div class="social-box container catalog-social-box">
+          <p>FOLLOWS US:</p>
+          <i class="fa-brands fa-facebook-f social-icon"></i>
+          <i class="fa-brands fa-x-twitter social-icon"></i>
+          <i class="fa-brands fa-youtube social-icon"></i>
+        </div>
+      </section>
+
+      <section class="movie-items">
+        <div class="container movie-items-container">
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/poster1.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-it3.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-it4.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-it2.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-item11.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-item12.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-item4.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+              <div class="card catalog-card">
+                <img src="img/mv-item2.jpg" alt="movie1" />
+                <div class="movie-hover-icon">
+                  <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                  <i class="fa-regular fa-circle-play play-icon"></i>
+                </div>
+                <div class="card-title catalog-card-title">
+                  <h4>Interstellar</h4>
+                  <p class="catalog-card-subtitle">Action/Movie</p>
+                  <p class="catalog-card-rate">
+                    <i class="fa-solid fa-star"></i> 7.4
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav aria-label="Page navigation example">
+            <ul
+              class="pagination pagination-lg justify-content-center catalog-pegination"
+            >
+              <li class="page-item catalog-pegination-item">
+                <a class="page-link catalog-pegination-link" href="#"
+                  >Previous</a
+                >
+              </li>
+              <li
+                class="page-item active catalog-pegination-item"
+                aria-current="page"
+              >
+                <a class="page-link catalog-pegination-link" href="catalog.html"
+                  >1</a
+                >
+              </li>
+              <li class="page-item catalog-pegination-item">
+                <a class="page-link catalog-pegination-link" href="#">2</a>
+              </li>
+              <li class="page-item catalog-pegination-item">
+                <a class="page-link catalog-pegination-link" href="#">3</a>
+              </li>
+              <li class="page-item catalog-pegination-item">
+                <a class="page-link catalog-pegination-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-quick-links links1">
+              <img src="img/logo.png" alt="logo" class="footer-logo" />
+              <div class="footer-social-box mt-3 ms-md-2">
+                <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links2">
+              <h4>Get in touch</h4>
+              <ul class="ms-md-3">
+                <li class="my-2">
+                  <i class="fa-solid fa-location-dot me-3"></i
+                  ><span>Afghanistan, Herat</span>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-phone me-5"
+                    ><span class="ms-2">+ 97533322</span></i
+                  >
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-envelope me-3"></i
+                  ><apan>movieforest@gmail.com</apan>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links3">
+              <h4>Quick Links</h4>
+              <ul class="me-md-4">
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Home</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Catalog</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copy-right">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>© Copyright All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Js Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
