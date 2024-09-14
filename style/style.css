@@ -869,6 +869,12 @@ header {
   margin-left: 20px;
   padding: 20px 20px 20px 0;
 }
+@media (max-width: 991px) {
+  .about-right {
+    margin-top: 70px;
+    padding-left: 0;
+  }
+}
 .about-title {
   margin-top: -16px;
 }
