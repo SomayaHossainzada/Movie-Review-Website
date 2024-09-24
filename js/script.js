@@ -74,7 +74,7 @@ $(document).ready(function () {
   });
 });
 
-// Movie & Series Section --- Owl Carousel
+// Movie & Series Section ---Movie Owl Carousel
 $(".movie-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -92,6 +92,25 @@ $(".movie-carousel").owlCarousel({
     },
   },
 });
+
+// Movie & Series Section ---Series Owl Carousel
+// $(".series-carousel").owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: false,
+//   dots: true,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     600: {
+//       items: 3,
+//     },
+//     1000: {
+//       items: 5,
+//     },
+//   },
+// });
 
 //Top Rated Section
 // const tab = document.querySelector(".vs-tabs");

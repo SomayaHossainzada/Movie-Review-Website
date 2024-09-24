@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Css Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap Css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Carousel Css min link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Carousel theme default link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>MOVIEFOREST</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <!-- Navbar Starts-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"
+              ><img src="img/logo.png" alt="logo" class="logo"
+            /></a>
+            <!-- Toggle btn -->
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Sidebar -->
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <!-- Sidebar Header -->
+              <div class="offcanvas-header border-bottom">
+                <img
+                  src="img/logo.png"
+                  alt="logo"
+                  class="logo"
+                  id="offcanvasNavbarLabel"
+                />
+                <button
+                  type="button"
+                  class="btn-close btn-close-white shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Sidebar Body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+                <ul
+                  class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+                >
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="catalog.html">CATALOG</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="pricing-plan.html"
+                      >PRICING PLAN</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                  </li>
+                </ul>
+                <!-- Login / Sign up -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                >
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2"
+                    >MY ACCOUNT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar ends -->
+      </header>
+
+      <section class="hero-section pb-0">
+        <h2 class="text-center pb-5">My Account</h2>
+        <!-- Profile Nav  -->
+        <div class="profile">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="profile-content-nav">
+                  <div class="profile-user">
+                    <div class="profile-avatar">
+                      <img src="img/Icon/user3.png" alt="user avatar" />
+                    </div>
+                    <div class="profile-meta">
+                      <h4>John Smith</h4>
+                      <span>ID: 7813</span>
+                    </div>
+                  </div>
+                  <!-- Nav Tabs Start -->
+                  <ul
+                    class="nav nav-pills user-profile-nav"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="true"
+                      >
+                        Profile
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-subs-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-subs"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-subs"
+                        aria-selected="false"
+                      >
+                        Subs
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-favorites-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-favorites"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-favorites"
+                        aria-selected="false"
+                      >
+                        Favorites
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-settings-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-settings"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-settings"
+                        aria-selected="false"
+                      >
+                        Settings
+                      </button>
+                    </li>
+                  </ul>
+
+                  <!-- Nav Tabs End -->
+                  <!-- Logout -->
+                  <button class="profile-logout" type="button">
+                    <img
+                      src="img/icon/log-out1.png"
+                      height="auto"
+                      width="18"
+                      alt="logout"
+                    />
+                    <span>Logout</span>
+                  </button>
+                  <!-- End Logout -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Nav End -->
+      </section>
+      <section class="tabs-content">
+        <div class="container">
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            >
+              <div class="row state-row">
+                <!-- State Start-->
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="user-profile-state">
+                    <span>Premium plan</span>
+                    <p>$34.99 / month</p>
+                    <i class="fa-regular fa-credit-card"></i>
+                  </div>
+                </div>
+                <!-- End State -->
+                <!-- State Start -->
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="user-profile-state">
+                    <span>Your Comments</span>
+                    <p>2 573</p>
+                    <i class="fa-regular fa-comment"></i>
+                  </div>
+                </div>
+                <!-- End State -->
+                <!-- State Start -->
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="user-profile-state">
+                    <span>Your Reviews</span>
+                    <p>1 021</p>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- End State -->
+              <div class="row pt-1">
+                <!-- Dashbox1 -->
+                <div class="col-12 col-xl-6">
+                  <div class="dashbox">
+                    <div class="dashbox-title">
+                      <h4>
+                        <i class="fa-solid fa-film"></i>
+                        Movies for you
+                      </h4>
+                      <div class="dashbox-wrap">
+                        <a class="dashbox-refresh" href="#">
+                          <i class="fa-solid fa-arrows-rotate"></i>
+                        </a>
+                        <a class="dashbox-more" href="#"> View All </a>
+                      </div>
+                    </div>
+
+                    <!-- Dashboard table -->
+                    <div
+                      class="dashbox-table-wrap dashbox-table-wrap-1"
+                      data-scrollbar="true"
+                      tabindex="-1"
+                      style="overflow: hidden; padding: 20px 0"
+                    >
+                      <div class="scroll-content">
+                        <table class="dashbox-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">TITLE</th>
+                              <th scope="col">CATEGORY</th>
+                              <th scope="col">RATING</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  241
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">The Lost City</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">Movie</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  9.2
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  852
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Undercurrents</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">Movie</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  9.1
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  9271
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Tales from the Underworld</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">TV Series</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  9.0
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  635
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">The Unseen World</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">TV Series</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  8.9
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  825
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Redemption Road</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">TV Series</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  8.9
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dashbox1 End -->
+                <!-- Dashbox2 -->
+                <div class="col-12 col-xl-6">
+                  <div class="dashbox">
+                    <div class="dashbox-title">
+                      <h4>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        Latest reviews
+                      </h4>
+                      <div class="dashbox-wrap">
+                        <a class="dashbox-refresh" href="#">
+                          <i class="fa-solid fa-arrows-rotate"></i>
+                        </a>
+                        <a class="dashbox-more" href="#"> View All </a>
+                      </div>
+                    </div>
+
+                    <!-- Dashboard table -->
+                    <div
+                      class="dashbox-table-wrap dashbox-table-wrap-2"
+                      data-scrollbar="true"
+                      tabindex="-1"
+                      style="overflow: hidden; padding: 20px 0"
+                    >
+                      <div class="scroll-content">
+                        <table class="dashbox-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">TITLE</th>
+                              <th scope="col">AUTHOR</th>
+                              <th scope="col">RATING</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  824
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">I Dream in Another Language</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  Eliza Josceline
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  7.2
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  602
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Benched</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">Ketut</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  6.3
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  538
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Whitney</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  Brian Cranston
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  8.4
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  129
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Blindspotting</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">Quang</div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  9.0
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td scope="row">
+                                <div class="dashbox-table-text text-grey">
+                                  360
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  <a href="#">Another</a>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="dashbox-table-text">
+                                  Jackson Brown
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="dashbox-table-text dashbox-table-text-rate"
+                                >
+                                  <i class="fa-regular fa-star"></i>
+                                  7.7
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dashbox2 End -->
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-subs"
+              role="tabpanel"
+              aria-labelledby="pills-subs-tab"
+              tabindex="0"
+            >
+              <!-- Pricing Plan Section -->
+      
+          <div class="row pt-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card pirce-plan-box-profile">
+                    <div class="price-box-title">
+                        <h3>Basic</h3>
+                        <p class="basic-box-subtitle text-end">Free</p>
+                    </div>
+                    <div class="price-box-body">
+                        <div>
+                            <ul>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>7 days</li>
+                                <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>720p Resolution</li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Availability</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Desktop Only</span></li>
+                                <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">Limited Support</span></li>        
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-basic-price col-12 mt-sm-4 rounded-2 px-4 py-2">REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box-profile">
+                <div class="price-box-title">
+                    <h3>Premium</h3>
+                    <p class="premium-box-subtitle text-end"><span>$34.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>1 Month</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Full HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">TV & Desktop</span></li>
+                            <li class="my-2"><i class="bi bi-dash-circle me-sm-2 grey-icon fa-lg"></i><span class="grey-text">24/7 Support</span></li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-premium-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card pirce-plan-box-profile">
+                <div class="price-box-title">
+                    <h3>Cinematic</h3>
+                    <p class="cinematic-box-subtitle text-end"><span>$49.99</span>/m</p>
+                </div>
+                <div class="price-box-body">
+                    <div>
+                        <ul>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>2 Months</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Ultra HD</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Limited Availability</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>Any Device</li>
+                            <li class="my-2"><i class="fa-regular fa-circle-check me-sm-2 check-icon fa-lg"></i>24/7 Support</li>        
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-cinematic-price col-12 mt-sm-4 rounded-2 px-4 py-2">CHOOSE PLAN</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-favorites"
+              role="tabpanel"
+              aria-labelledby="pills-favorites-tab"
+              tabindex="0"
+            >
+                <div class="row pt-5">
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/poster1.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-it3.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-it4.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-it2.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-1">
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-item11.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-item12.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-item4.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12 col-md-4 col-lg-3 my-3">
+                    <div class="card catalog-card">
+                      <img src="img/mv-item2.jpg" alt="movie1" />
+                      <div class="movie-hover-icon">
+                        <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                        <i class="fa-regular fa-circle-play play-icon"></i>
+                      </div>
+                      <div class="card-title catalog-card-title">
+                        <h4>Interstellar</h4>
+                        <p class="catalog-card-subtitle">Action/Movie</p>
+                        <p class="catalog-card-rate">
+                          <i class="fa-solid fa-star"></i> 7.4
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <nav aria-label="Page navigation example">
+                  <ul
+                    class="pagination pagination-lg justify-content-center profile-catalog-pegination"
+                  >
+                    <li class="page-item catalog-pegination-item">
+                      <a class="page-link catalog-pegination-link" href="#"
+                        >Previous</a
+                      >
+                    </li>
+                    <li
+                      class="page-item active catalog-pegination-item"
+                      aria-current="page"
+                    >
+                      <a class="page-link catalog-pegination-link" href="catalog.html"
+                        >1</a
+                      >
+                    </li>
+                    <li class="page-item catalog-pegination-item">
+                      <a class="page-link catalog-pegination-link" href="#">2</a>
+                    </li>
+                    <li class="page-item catalog-pegination-item">
+                      <a class="page-link catalog-pegination-link" href="#">3</a>
+                    </li>
+                    <li class="page-item catalog-pegination-item">
+                      <a class="page-link catalog-pegination-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-settings"
+              role="tabpanel"
+              aria-labelledby="pills-settings-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <!-- Details Form -->
+                <div class="col-12 col-lg-6">
+                  <form action="#" class="user-profile-form user-profile-form-full">
+                    <div class="row">
+                      <div class="col-12">
+                        <h4 class="detail-form-title">Profile details</h4>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="username">
+                            Username
+                          </label>
+                          <input id="username" type="text" name="username" class="detail-f-input" placeholder="User 123">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="email">
+                            Email
+                          </label>
+                          <input id="email" type="email" name="email" class="detail-f-input" placeholder="email@email.com">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="fname">
+                            Name
+                          </label>
+                          <input id="fname" type="text" name="fname" class="detail-f-input" placeholder="John Smith">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="detail-f-avatar-upload">
+                            Avatar
+                          </label>
+                          <div class="detail-f-gallery">
+                            <label id="gallery1" for="detail-f-gallery-upload" >
+                              Upload (40X40)
+                            </label>
+                            <input id="detail-f-gallery-upload" name="gallery" class="detail-f-gallery-upload" type="file" accept=".png, .jpg, .jpeg" multiple>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button class="detail-f-btn detail-f-btn-small" type="button">Save</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+                <!-- End Details Form -->
+                <!-- Password Form -->
+                <div class="col-12 col-lg-6">
+                  <form action="#" class="user-profile-form user-profile-form-full">
+                    <div class="row">
+                      <div class="col-12">
+                        <h4 class="detail-form-title">Change password</h4>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="oldpass">
+                            Old password
+                          </label>
+                          <input id="oldpass" type="password" name="oldpass" class="detail-f-input">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="newpass">
+                            New password
+                          </label>
+                          <input id="newpass" type="password" name="newpass" class="detail-f-input">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="confirmpass">
+                            Confirm new password
+                          </label>
+                          <input id="confirmpass" type="password" name="confirmpass" class="detail-f-input">
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                        <div class="detail-f-group">
+                          <label class="detail-f-label" for="select">
+                            Select
+                          </label>
+                          <select name="select" id="select" class="detail-f-select">
+                            <option value="0">Option</option>
+                            <option value="1">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button class="detail-f-btn detail-f-btn-small" type="button">Change</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+                <!-- End Password Form -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-quick-links links1">
+              <img src="img/logo.png" alt="logo" class="footer-logo" />
+              <div class="footer-social-box mt-3 ms-md-2">
+                <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links2">
+              <h4>Get in touch</h4>
+              <ul class="ms-md-3">
+                <li class="my-2">
+                  <i class="fa-solid fa-location-dot me-3"></i
+                  ><span>Afghanistan, Herat</span>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-phone me-5"
+                    ><span class="ms-2">+ 97533322</span></i
+                  >
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-envelope me-3"></i
+                  ><apan>movieforest@gmail.com</apan>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-quick-links links3">
+              <h4>Quick Links</h4>
+              <ul class="me-md-4">
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Home</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">Catalog</a>
+                </li>
+                <li class="my-2">
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
+                  ><a href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copy-right">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>© Copyright All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Js Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
