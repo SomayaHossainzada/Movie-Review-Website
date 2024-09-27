@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000408;
+        color: white;
+      }
+      .sidebar {
+        background-color: #abb7c420;
+        height: 110vh;
+       
+      }
+      .sidebar a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px;
+        display: flex;
+        margin-right: 40px;
+        margin-top: 0%;
+      }
+      .sidebar a:hover {
+        background-color: #2e3b4e;
+      }
+      .sidebar .active {
+        background-color: #dcf836;
+        color: black;
+      }
+      
+      
+      
+      body {
+        background-color: #152230; /* Dark background for the whole page */
+        font-family: Arial, sans-serif;
+        color: white;
+        margin: 0;
+        padding: 20px;
+      }
+      .table-container {
+        overflow-x: auto;
+      }
+      .review-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1em; /* Space between rows */
+      }
+      .review-table th,
+      .review-table td {
+        background-color: #152230; /* Dark blue for cells */
+        padding: 10px 20px;
+        border: none;
+      }
+      .review-table th {
+        background-color: transparent; /* No background for headers, they are invisible */
+        position: sticky;
+        top: 0;
+      }
+      .review-table tr {
+        margin: 10px 0; /* Adds space between rows */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 0 0.2rem #4280bf; /* Blue glow */
+      }
+      .rating {
+        color: #ffc107; /* Gold color for the rating stars */
+      }
+      .delete-icon{
+        color: rgba(219, 20, 20, 0.694);
+      }
+      .Comments-table{
+        margin: 10px 0; /* Adds space between rows */
+        background-color: transparent; /* No background for headers, they are invisible */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1em; /* Space between rows */
+        color: gray;
+      }
+    
+    
+    .John{
+      margin-top: 0px;
+      margin-right: 15px;
+      font-size: medium;
+    }
+    .pagination {
+        justify-content: center;
+        border: #abb7c4;
+        
+      }
+
+      .pagination .page-link {
+        background-color: rgba(0, 0, 0, 0.691);
+        color: #fff;
+        border: none;
+        gap: 10px;
+        margin: 20px 0; /* Adds space between rows */
+        box-shadow: 0 0 0.3rem #4280bf; /* Blue glow */
+      }
+
+      .pagination .page-link:hover {
+        background-color: rgb(37, 65, 140);
+        color: #fff;
+        border: 10px;
+      }
+
+      .pagination .active .page-link {
+        background-color: rgb(0, 68, 255);
+        border-color: rgb(0, 68, 255);
+        
+      }
+      .btn-ICON{
+border: none;
+margin-left: 10px;
+margin-top: 15px;
+box-shadow: 0 0 0.3rem #dcf836; /* Blue glow */
+margin: 20px 0; /* Adds space between rows */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 sidebar ">
+          <div class="text-center py-4">
+            <div class="text-end d-flex gap-3">
+            <img src="photo/HUMANNN.JPG " height="70px" width="50px"
+             alt="Admin Image" class="rounded-circle">
+             
+              
+<div class="John">
+            <h6>Admin
+              <br>
+              <br>
+              John Smith
+            </h6>
+          </div>
+          <div class="btn-ICON">
+          <img src="photo/icon.png" height="auto" width="50px" alt="">
+        </div>
+        </button>
+      </span>
+        </div>
+          
+          </div>
+          
+          <a href="admin-panel.html" class="d-block mb-2"
+            ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+          >
+          <a href="#" class="d-block mb-2"
+            ><i class="fas fa-box"></i> Catalog</a
+          >
+          <a href="#" class="d-block mb-2"
+            ><i class="fas fa-users"></i> Users</a
+          >
+          <a href="comment.html" class="d-block mb-2"
+            ><i class="fas fa-comments"></i> Comments</a
+          >
+          <a href="review.html" class="d-block mb-2"
+            ><i class="fas fa-comments"></i> Reviews</a
+          >
+          <a href="index.html" class="d-block mb-2"
+            ><i class="fas fa-arrow-left"></i> Back to Home</a
+          >
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 main-content">
+          <h3>Reviews</h3>
+          <div class="style">
+            <table class="table table-responsiv">
+              
+              <div class="table-container">
+                <table class="Comments-table">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Item</th>
+                <th>Author</th>
+                <th>Text</th>
+                <th>Rating</th>
+                <th>Actions</th>
+              </tr>
+            </div>
+            </table>
+          </thead>
+              <div class="table-container">
+                <table class="review-table">
+                  
+                  <tbody>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Whitney</td>
+                      <td>Sara</td>
+                      <td>When an old friend...</td>
+                      <td><span class="rating">⭐ 7.9</span></td>
+                        <td><i class="fas fa-trash-alt delete-icon"></i></td>
+                    </tr>
+          
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example" class="mt-4">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Pre</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

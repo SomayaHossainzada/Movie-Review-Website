@@ -241,3 +241,5 @@ $(".movie-carousel").owlCarousel({
 //     scrollWidth - (clientWidth + scrolled_width) <= 1
 //   );
 // }
+
+//Admin Panel Sidebar

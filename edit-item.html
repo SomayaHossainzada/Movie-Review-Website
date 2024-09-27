@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Css Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap Css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
+    />
+    <!-- Carousel Css min link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Carousel theme default link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>MOVIEFOREST</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="admin-header">
+      <div class="admin-header-content">
+        <!-- logo -->
+        <a href="index.html" class="admin-header-logo">
+          <img src="img/logo.png" alt="logo" class="logo" />
+        </a>
+        <!-- End logo -->
+        <!-- header menu btn -->
+        <button class="admin-header-btn admin-header-btn-active" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- End menu btn -->
+      </div>
+    </header>
+    <!-- End header -->
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+      <!-- sidebar logo -->
+      <a href="index.html" class="admin-sidebar-logo">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <!-- End sidebar logo -->
+      <!-- Sidebar user -->
+      <div class="admin-sidebar-user">
+        <div class="admin-sidebar-user-img">
+          <img src="img/icon/user3.png" alt="user img" />
+        </div>
+        <div class="admin-sidebar-user-title">
+          <span>Admin</span>
+          <p>John Smith</p>
+        </div>
+        <button class="admin-sidebar-user-btn" type="button">
+          <img
+            src="img/icon/log-out1.png"
+            height="auto"
+            width="18"
+            alt="logout"
+          />
+        </button>
+      </div>
+      <!-- End sidebar user -->
+      <!-- Sidebar nav -->
+      <div class="admin-sidebar-nav-wrap">
+        <ul class="admin-sidebar-nav">
+          <li class="admin-sidebar-nav-item">
+            <a href="admin-panel.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-columns-gap"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="admin-sidebar-nav-item">
+            <a href="admin-catalog.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-film"></i>
+              <!-- <i class="fa-solid fa-film"></i> -->
+              <span>Catalog</span>
+            </a>
+          </li>
+          <li class="admin-sidebar-nav-item">
+            <a href="admin-users.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-people"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li class="admin-sidebar-nav-item">
+            <a href="comment.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-chat-square-text"></i>
+              <span>Comments</span>
+            </a>
+          </li>
+          <li class="admin-sidebar-nav-item">
+            <a href="review.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-star-half"></i>
+              <!-- <i class="fa-solid fa-star-half-stroke"></i> -->
+              <span>Reviews</span>
+            </a>
+          </li>
+          <li class="admin-sidebar-nav-item">
+            <a href="index.html" class="admin-sidebar-nav-link">
+              <i class="bi bi-arrow-left"></i>
+              <span>Back to home</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End sidebar nav -->
+    </div>
+    <main class="main">
+      <div class="container-fluid admin-container">
+        <div class="row">
+          <!-- Title -->
+          <div class="col-12">
+            <div class="main-title">
+              <h2>Edit item</h2>
+            </div>
+          </div>
+          <!-- End title -->
+          <h3 edit-item--id>ID: <sapn style="color: #dd003f">12</sapn></h3>
+          <div class="col-12">
+            <form action="#" class="detail-f-form add-item-form">
+              <div class="row">
+                <div class="col-12 col-xl-7">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="add-f-group">
+                        <input
+                          type="text"
+                          class="add-f-input"
+                          placeholder="Title"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="add-f-group">
+                        <textarea
+                          id="text"
+                          name="text"
+                          class="add-f-textarea"
+                          placeholder="Synopsis"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-5">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="add-f-group">
+                        <select class="select-add-f-group">
+                          <option value="FullHD">Full HD</option>
+                          <option value="HD">HD</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="add-f-group">
+                        <select class="select-add-f-group">
+                          <option value="Choose Genre">Choose Genre</option>
+                          <option value="Action">Action</option>
+                          <option value="Action">Animation</option>
+                          <option value="Action">Comedy</option>
+                          <option value="Action">Crime</option>
+                          <option value="Action">Drama</option>
+                          <option value="Action">Historical</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="detail-f-group">
+                        <div class="detail-f-gallery release-date">
+                          <label id="gallery1" for="detail-f-gallery-upload">
+                            Release Date
+                          </label>
+                          <input
+                            id="detail-f-gallery-upload"
+                            name="gallery"
+                            class="detail-f-gallery-upload"
+                            type="date"
+                            multiple
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="add-f-group">
+                        <select class="select-add-f-group">
+                          <option value="Choose Country">Choose Country</option>
+                          <option value="Afg">Afghanistan</option>
+                          <option value="USA">USA</option>
+                          <option value="Iran">Iran</option>
+                          <option value="India">India</option>
+                          <option value="Italy">Italy</option>
+                          <option value="France">France</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-xl-6">
+                  <div class="detail-f-group">
+                    <div class="detail-f-gallery add-director">
+                      <label id="gallery1" for="detail-f-gallery-upload">
+                        Add Director
+                      </label>
+                      <input
+                        id="detail-f-gallery-upload"
+                        name="gallery"
+                        class="detail-f-gallery-upload"
+                        type="file"
+                        accept=".png, .jpg, .jpeg"
+                        multiple
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="detail-f-group">
+                    <div class="detail-f-gallery add-cast">
+                      <label id="gallery1" for="detail-f-gallery-upload">
+                        Add Cast
+                      </label>
+                      <input
+                        id="detail-f-gallery-upload"
+                        name="gallery"
+                        class="detail-f-gallery-upload"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-xl-5">
+                  <div class="detail-f-group">
+                    <div class="detail-f-gallery upload-cover">
+                      <label id="gallery1" for="detail-f-gallery-upload">
+                        Upload Cover
+                      </label>
+                      <input
+                        id="detail-f-gallery-upload"
+                        name="gallery"
+                        class="detail-f-gallery-upload"
+                        type="file"
+                        accept=".png, .jpg, .jpeg"
+                        multiple
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-7">
+                  <div class="detail-f-group">
+                    <div class="detail-f-gallery add-crew">
+                      <label id="gallery1" for="detail-f-gallery-upload">
+                        Add Crew
+                      </label>
+                      <input
+                        id="detail-f-gallery-upload"
+                        name="gallery"
+                        class="detail-f-gallery-upload"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    class="detail-f-btn detail-f-btn-small admin-edit-btn"
+                    type="button"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Js Carousel CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
