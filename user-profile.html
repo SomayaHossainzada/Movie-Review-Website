@@ -42,7 +42,8 @@
 
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
-
+  
+    <link rel="icon" href="img/favicon.png">
     <title>MOVIEFOREST</title>
   </head>
   <body>
@@ -65,7 +66,8 @@
               aria-controls="offcanvasNavbar"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars toggler-icon"></i>
+              <!-- <span class="navbar-toggler-icon"></span> -->
             </button>
             <!-- Sidebar -->
             <div
@@ -142,7 +144,11 @@
                       <img src="img/Icon/user3.png" alt="user avatar" />
                     </div>
                     <div class="profile-meta">
-                      <h4>John Smith</h4>
+                      <h4>
+                        <script>
+                          document.write(localStorage.getItem('name'));
+                        </script>
+                      </h4>
                       <span>ID: 7813</span>
                     </div>
                   </div>
@@ -212,7 +218,7 @@
 
                   <!-- Nav Tabs End -->
                   <!-- Logout -->
-                  <button class="profile-logout" type="button">
+                  <button class="profile-logout" type="button" onclick="logout()">
                     <img
                       src="img/icon/log-out1.png"
                       height="auto"
@@ -980,44 +986,39 @@
       <div class="footer-links">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-md-4 col-quick-links links1">
-              <img src="img/logo.png" alt="logo" class="footer-logo" />
-              <div class="footer-social-box mt-3 ms-md-2">
-                <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
-                <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
-                <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+            <div class=" col-xs-12 col-md-4 col-quick-links links1">
+              
+                <img src="img/logo.png" alt="logo" class="footer-logo" />
+                <div class="footer-social-box mt-3 ms-md-2">
+                  <i class="fa-brands fa-facebook-f mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
+                  <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
+                </div>
+                <div class="footer-border"></div>
               </div>
-            </div>
-
+           
             <div class="col-xs-12 col-md-4 col-quick-links links2">
               <h4>Get in touch</h4>
               <ul class="ms-md-3">
                 <li class="my-2">
-                  <i class="fa-solid fa-location-dot me-3"></i
-                  ><span>Afghanistan, Herat</span>
+                  <i class="fa-solid fa-location-dot me-3"></i><span>Afghanistan, Herat</span>
                 </li>
                 <li class="my-2">
-                  <i class="fa-solid fa-phone me-5"
-                    ><span class="ms-2">+ 97533322</span></i
-                  >
+                  <i class="fa-solid fa-phone me-5"><span class="ms-2">+ 97533322</span></i>
                 </li>
-                <li class="my-2">
-                  <i class="fa-solid fa-envelope me-3"></i
-                  ><apan>movieforest@gmail.com</apan>
-                </li>
+                <li class="my-2"><i class="fa-solid fa-envelope me-3"></i><span>movieforest@gmail.com</span></li>
               </ul>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links3">
               <h4>Quick Links</h4>
               <ul class="me-md-4">
                 <li class="my-2">
-                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
-                  ><a href="#">Home</a>
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Home</a>
                 </li>
                 <li class="my-2">
-                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
-                  ><a href="#">Catalog</a>
+                  <i class="fa-solid fa-chevron-right me-3 grey-icon"></i><a href="#">Catalog</a>
                 </li>
                 <li class="my-2">
                   <i class="fa-solid fa-chevron-right me-3 grey-icon"></i
@@ -1028,16 +1029,17 @@
           </div>
         </div>
       </div>
-
-      <div class="footer-copy-right">
+        
+      <div class="footer-copy-right"> 
         <div class="container">
           <div class="row">
-            <div class="col">
-              <p>© Copyright All Rights Reserved</p>
-            </div>
+          <div class="col">
+            <p>© Copyright All Rights Reserved</p>
           </div>
-        </div>
+        </div> 
       </div>
+       
+      </div> 
     </footer>
     <!-- Bootstrap Js CDN -->
     <script

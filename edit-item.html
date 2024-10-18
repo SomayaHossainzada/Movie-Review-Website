@@ -43,6 +43,8 @@
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
 
+    <link rel="icon" href="img/favicon.png" />
+
     <title>MOVIEFOREST</title>
   </head>
   <body>
@@ -144,8 +146,10 @@
               <h2>Edit item</h2>
             </div>
           </div>
+          <h3 class="edit-item--id ps-5 pt-3">
+            ID: <sapn style="color: #dd003f">12</sapn>
+          </h3>
           <!-- End title -->
-          <h3 edit-item--id>ID: <sapn style="color: #dd003f">12</sapn></h3>
           <div class="col-12">
             <form action="#" class="detail-f-form add-item-form">
               <div class="row">
@@ -204,15 +208,14 @@
                     <div class="col-12">
                       <div class="detail-f-group">
                         <div class="detail-f-gallery release-date">
-                          <label id="gallery1" for="detail-f-gallery-upload">
-                            Release Date
-                          </label>
                           <input
-                            id="detail-f-gallery-upload"
+                            id="date-new-item"
                             name="gallery"
-                            class="detail-f-gallery-upload"
-                            type="date"
-                            multiple
+                            class="add-f-input release-date-input"
+                            type="text"
+                            placeholder="Release Date"
+                            onfocus="this.type='date'"
+                            onblur="this.type='text'"
                           />
                         </div>
                       </div>
@@ -237,37 +240,24 @@
                 </div>
               </div>
               <div class="row">
+                <!-- <div class="col-12 col-xl-6">
+                  <button class="add-director-btn">Add Director</button>
+                </div> -->
                 <div class="col-12 col-xl-6">
-                  <div class="detail-f-group">
-                    <div class="detail-f-gallery add-director">
-                      <label id="gallery1" for="detail-f-gallery-upload">
-                        Add Director
-                      </label>
-                      <input
-                        id="detail-f-gallery-upload"
-                        name="gallery"
-                        class="detail-f-gallery-upload"
-                        type="file"
-                        accept=".png, .jpg, .jpeg"
-                        multiple
-                      />
-                    </div>
-                  </div>
+                  <button class="add-director-btn" id="addDirectorButton">
+                    Add Director
+                  </button>
+                  <div id="directorContainer" class="mt-3"></div>
                 </div>
+
+                <!-- <div class="col-12 col-xl-6">
+                  <button class="add-cast-btn">Add Cast</button>
+                </div> -->
                 <div class="col-12 col-xl-6">
-                  <div class="detail-f-group">
-                    <div class="detail-f-gallery add-cast">
-                      <label id="gallery1" for="detail-f-gallery-upload">
-                        Add Cast
-                      </label>
-                      <input
-                        id="detail-f-gallery-upload"
-                        name="gallery"
-                        class="detail-f-gallery-upload"
-                        type="text"
-                      />
-                    </div>
-                  </div>
+                  <button class="add-cast-btn" id="addCastButton">
+                    Add Cast
+                  </button>
+                  <div id="castContainer" class="mt-3"></div>
                 </div>
               </div>
               <div class="row">
@@ -288,17 +278,63 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12 col-xl-7">
-                  <div class="detail-f-group">
-                    <div class="detail-f-gallery add-crew">
-                      <label id="gallery1" for="detail-f-gallery-upload">
-                        Add Crew
+                  <button class="add-crew-btn" id="addCrewButton">
+                    Add Crew
+                  </button>
+                  <div id="crewContainer" class="mt-3"></div>
+                </div>
+
+                <div class="col-12 radio-group">
+                  <div class="row">
+                    <h5>Item Type</h5>
+                    <div class="col-12 movie-radio-container">
+                      <input
+                        type="radio"
+                        id="movie"
+                        name="item-type"
+                        checked
+                      /><label for="movie">Movie</label>
+                    </div>
+                    <div class="col-12 series-radio-container">
+                      <input type="radio" id="series" name="item-type" /><label
+                        for="series"
+                        >Series</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="detail-f-group trailer-group">
+                    <div class="detail-f-gallery upload-cover trailer-cover">
+                      <label id="gallery1" for="upload-trailer">
+                        Upload Trailer Video
                       </label>
                       <input
-                        id="detail-f-gallery-upload"
+                        id="upload-trailer"
                         name="gallery"
                         class="detail-f-gallery-upload"
-                        type="text"
+                        type="file"
+                        accept=".mp4, .mov .wmv"
+                        multiple
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="detail-f-group full-movie-group">
+                    <div class="detail-f-gallery upload-cover full-movie-cover">
+                      <label id="gallery1" for="upload-full-movie">
+                        Upload Full Movie
+                      </label>
+                      <input
+                        id="upload-full-movie"
+                        name="gallery"
+                        class="detail-f-gallery-upload"
+                        type="file"
+                        accept=".mp4, .mov .wmv"
+                        multiple
                       />
                     </div>
                   </div>
@@ -329,5 +365,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script>
+      // Add Director Member
+      document
+        .getElementById("addDirectorButton")
+        .addEventListener("click", function () {
+          const directorContainer =
+            document.getElementById("directorContainer");
+          const directorMemberDiv = document.createElement("div");
+          directorMemberDiv.className = "director-member";
+
+          directorMemberDiv.innerHTML = `
+          <input type='text' class="add-f-input mb-2" placeholder="Name" required>
+          <input type='file' class='form-control mb-2 add-f-file' accept='image/*' required>
+          <textarea class='add-f-textarea mb-2' placeholder='Brief Biography' required></textarea>`;
+
+          directorContainer.appendChild(directorMemberDiv);
+        });
+
+      // Add Cast Member
+      document
+        .getElementById("addCastButton")
+        .addEventListener("click", function () {
+          const castContainer = document.getElementById("castContainer");
+          const castMemberDiv = document.createElement("div");
+          castMemberDiv.className = "cast-member";
+
+          castMemberDiv.innerHTML = `
+          <input type='text' class="add-f-input mb-2" placeholder="Name" required>
+          <input type='file' class='form-control mb-2 add-f-file' accept='image/*' required>
+          <textarea class='add-f-textarea mb-2' placeholder='Brief Biography' required></textarea>`;
+
+          castContainer.appendChild(castMemberDiv);
+        });
+      // Add Crew Member
+      document
+        .getElementById("addCrewButton")
+        .addEventListener("click", function () {
+          const crewContainer = document.getElementById("crewContainer");
+          const crewMemberDiv = document.createElement("div");
+          crewMemberDiv.className = "crew-member";
+
+          crewMemberDiv.innerHTML = `
+              <input type="text" class="add-f-input mb-2" placeholder="Name" required>
+              <input type="file" class="form-control mb-2 add-f-file" accept="image/*" required>
+              <textarea class="add-f-textarea mb-2" placeholder="Brief Biography" required></textarea>
+          `;
+
+          crewContainer.appendChild(crewMemberDiv);
+        });
+    </script>
   </body>
 </html>

@@ -43,9 +43,169 @@
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
 
+    <link rel="icon" href="img/favicon.png" />
     <title>MOVIEFOREST</title>
   </head>
   <body>
+    <!-- Start Login form popup -->
+    <div class="sign-in-container hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-in-modal">
+              <button class="close-modal_sign_in">&times;</button>
+              <form action="#" method="post" class="sign-form">
+                <h2>Sign In</h2>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="sign-email"
+                    name="sign-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="sign-pass"
+                    name="sign-pass"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="remember"
+                    name="remember"
+                    type="checkbox"
+                    checked
+                  />
+                  <label for="remember">Remember Me</label>
+                </div>
+                <button
+                  class="detail-f-btn sign-f-btn"
+                  type="submit"
+                  onclick="checkLoginFormData()"
+                >
+                  Sign in
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign in with
+                    <i class="fa-brands fa-facebook-f social-icon"></i>
+                  </a>
+
+                  <a class="gl" href="#"
+                    >Sign in with
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+                <span class="sign-text"
+                  >Don't have an account? <a href="#">Sign up!</a></span
+                >
+                <span class="sign-text">
+                  <a href="#">Forgot password?</a>
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End login form popup -->
+    <!-- Start Sign up form popup -->
+    <div class="sign sign-modal hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-up-modal">
+              <button class="close-modal_sign_up">&times;</button>
+              <form action="" method="post" class="sign-up-form">
+                <h2>Sign Up</h2>
+                <div class="detail-f-group">
+                  <label for="sign-name" class="detail-f-label sign-f-label"
+                    >Name</label
+                  >
+                  <input
+                    id="username"
+                    name="user-name"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="user-email"
+                    name="user-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="user-password"
+                    name="user-password"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="policy"
+                    name="policy"
+                    type="checkbox"
+                    checked
+                    required
+                  />
+                  <label for="policy">I agree to the Privacy Policy</label>
+                </div>
+                <button
+                  class="detail-f-btn sign-f-btn"
+                  type="submit"
+                  onclick="saveFormData()"
+                >
+                  Sign up
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign up with
+                    <i class="fa-brands fa-facebook-f social-icon"></i>
+                  </a>
+
+                  <a class="gl" href="#"
+                    >Sign up with
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+                <span class="sign-text"
+                  >Already have an account? <a href="#">Sign In!</a></span
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign up form popup -->
+    <div class="overlay hidden"></div>
     <main>
       <!-- Header Section -->
       <header>
@@ -65,7 +225,8 @@
               aria-controls="offcanvasNavbar"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa-solid fa-bars toggler-icon"></i>
+              <!-- <span class="navbar-toggler-icon"></span> -->
             </button>
             <!-- Sidebar -->
             <div
@@ -174,68 +335,60 @@
           <div class="row">
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/poster1.jpg" alt="movie1" />
+                <img src="" alt="Movie1" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-it3.jpg" alt="movie1" />
+                <img src="" alt="movie2" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-it4.jpg" alt="movie1" />
+                <img src="" alt="movie3" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-it2.jpg" alt="movie1" />
+                <img src="" alt="movie4" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
@@ -243,68 +396,60 @@
           <div class="row mt-1">
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-item11.jpg" alt="movie1" />
+                <img src="" alt="movie5" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-item12.jpg" alt="movie1" />
+                <img src="" alt="movie6" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-item4.jpg" alt="movie1" />
+                <img src="" alt="movie7" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-lg-3 my-3">
               <div class="card catalog-card">
-                <img src="img/mv-item2.jpg" alt="movie1" />
+                <img src="" alt="movie8" />
                 <div class="movie-hover-icon">
                   <i class="fa-regular fa-bookmark bookmark-icon"></i>
                   <i class="fa-regular fa-circle-play play-icon"></i>
                 </div>
                 <div class="card-title catalog-card-title">
-                  <h4>Interstellar</h4>
-                  <p class="catalog-card-subtitle">Action/Movie</p>
-                  <p class="catalog-card-rate">
-                    <i class="fa-solid fa-star"></i> 7.4
-                  </p>
+                  <h4></h4>
+                  <p class="catalog-card-subtitle"></p>
+                  <p class="catalog-card-rate"></p>
                 </div>
               </div>
             </div>
@@ -353,6 +498,7 @@
                 <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
                 <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
               </div>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links2">
@@ -369,9 +515,10 @@
                 </li>
                 <li class="my-2">
                   <i class="fa-solid fa-envelope me-3"></i
-                  ><apan>movieforest@gmail.com</apan>
+                  ><span>movieforest@gmail.com</span>
                 </li>
               </ul>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links3">
@@ -416,6 +563,6 @@
     <!-- Js Carousel CDN link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

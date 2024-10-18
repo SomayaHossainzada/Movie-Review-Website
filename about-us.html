@@ -42,10 +42,157 @@
 
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
+    
+    <link rel="icon" href="img/favicon.png">
 
     <title>MOVIEFOREST</title>
   </head>
   <body>
+    <!-- Start Login form popup -->
+    <div class="sign-in-container hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-in-modal">
+              <button class="close-modal_sign_in">&times;</button>
+              <form action="#" method="post" class="sign-form">
+                <h2>Sign In</h2>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="sign-email"
+                    name="sign-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="sign-pass"
+                    name="sign-pass"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="remember"
+                    name="remember"
+                    type="checkbox"
+                    checked
+                  />
+                  <label for="remember">Remember Me</label>
+                </div>
+                <button class="detail-f-btn sign-f-btn" type="submit">
+                  Sign in
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign in with
+                    <i class="fa-brands fa-facebook-f social-icon"></i
+                  ></a>
+                  <a class="gl" href="#"
+                    >Sign in with <i class="bi bi-google"></i
+                  ></a>
+                </div>
+                <span class="sign-text"
+                  >Don't have an account? <a href="#">Sign up!</a></span
+                >
+                <span class="sign-text"><a href="#">Forgot password?</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End login form popup -->
+    <!-- Start Sign Up form popup -->
+    <div class="sign sign-modal hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-up-modal">
+              <button class="close-modal_sign_up">&times;</button>
+              <form action="#" method="post" class="sign-up-form">
+                <h2>Sign Up</h2>
+                <div class="detail-f-group">
+                  <label for="username" class="detail-f-label sign-f-label"
+                    >Name</label
+                  >
+                  <input
+                    id="username"
+                    name="user-name"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="user-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="user-email"
+                    name="user-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="user-password" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="user-password"
+                    name="user-password"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="policy"
+                    name="policy"
+                    type="checkbox"
+                    checked
+                    required
+                  />
+                  <label for="policy">I agree to the Privacy Policy</label>
+                </div>
+                <button class="detail-f-btn sign-f-btn" type="submit">
+                  Sign up
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign up with
+                    <i class="fa-brands fa-facebook-f social-icon"></i
+                  ></a>
+                  <a class="gl" href="#"
+                    >Sign up with <i class="bi bi-google"></i
+                  ></a>
+                </div>
+                <span class="sign-text"
+                  >Already have an account? <a href="#">Sign In!</a></span
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Up form popup -->
+    <div class="overlay hidden"></div>
     <main>
       <!-- Header Section -->
       <header>
@@ -65,7 +212,8 @@
               aria-controls="offcanvasNavbar"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa-solid fa-bars toggler-icon"></i>
+              <!-- <span class="navbar-toggler-icon"></span> -->
             </button>
             <!-- Sidebar -->
             <div
@@ -201,7 +349,7 @@
                   <img src="img/Icon/video2.png" alt="counter icon" />
                 </div>
                 <div class="counter-content">
-                  <sapn class="counter">900</sapn>
+                  <span class="counter" data-count="900">0</span>
                   <h5 class="counter-title">+Total Movies</h5>
                 </div>
               </div>
@@ -213,7 +361,7 @@
                   <img src="img/Icon/review1.png" alt="counter icon" />
                 </div>
                 <div class="counter-content">
-                  <sapn class="counter">2500</sapn>
+                  <span class="counter" data-count="2500">0</span>
                   <h5 class="counter-title">+Happy Clients</h5>
                 </div>
               </div>
@@ -225,7 +373,7 @@
                   <img src="img/Icon/self-employed1.png" alt="counter icon" />
                 </div>
                 <div class="counter-content">
-                  <sapn class="counter">300</sapn>
+                  <span class="counter" data-count="300">0</span>
                   <h5 class="counter-title">+Team Workers</h5>
                 </div>
               </div>
@@ -237,7 +385,7 @@
                   <img src="img/Icon/badge1.png" alt="counter icon" />
                 </div>
                 <div class="counter-content">
-                  <sapn class="counter">30</sapn>
+                  <span class="counter" data-count="30">0</span>
                   <h5 class="counter-title">+Award Wining</h5>
                 </div>
               </div>
@@ -456,6 +604,7 @@
                 <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
                 <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
               </div>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links2">
@@ -472,9 +621,10 @@
                 </li>
                 <li class="my-2">
                   <i class="fa-solid fa-envelope me-3"></i
-                  ><apan>movieforest@gmail.com</apan>
+                  ><span>movieforest@gmail.com</span>
                 </li>
               </ul>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links3">
@@ -520,5 +670,219 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signInContainer = document.querySelector(".sign-in-container");
+        const signModal = document.querySelector(".sign-modal");
+        const overlay = document.querySelector(".overlay");
+        const closeModalSignIn = document.querySelector(".close-modal_sign_in");
+        const closeModalSignUp = document.querySelector(".close-modal_sign_up");
+        const signInBtn = document.querySelector(".login-btn");
+        const signUpBtn = document.querySelector(".signup-btn");
+
+        if (!signInBtn || !signUpBtn) {
+          console.error("Sign-in or Sign-up button not found!");
+          return; // Exit if buttons are missing
+        }
+
+        const toggleModal = (modal, action) => {
+          modal.classList[action]("hidden");
+          overlay.classList[action]("hidden");
+        };
+
+        signInBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          toggleModal(signInContainer, "remove");
+        });
+
+        signUpBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          toggleModal(signModal, "remove");
+        });
+
+        closeModalSignIn.addEventListener("click", () =>
+          toggleModal(signInContainer, "add")
+        );
+        closeModalSignUp.addEventListener("click", () =>
+          toggleModal(signModal, "add")
+        );
+
+        overlay.addEventListener("click", () => {
+          toggleModal(signInContainer, "add");
+          toggleModal(signModal, "add");
+        });
+
+        // Validation form check
+        const form = document.querySelector(".sign-form"); // Fixed selector
+        const email = document.querySelector("#sign-email");
+        const password = document.querySelector("#sign-pass");
+
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default form submission
+            validateInputs(); // Call the validation function
+          });
+        } else {
+          console.error("Sign-in form not found!");
+        }
+
+        const setError = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = message;
+          inputControl.classList.add("form-error");
+          inputControl.classList.remove("form-success");
+        };
+
+        const setSuccess = (element) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = "";
+          inputControl.classList.add("form-success");
+          inputControl.classList.remove("form-error");
+        };
+
+        const isValidEmail = (email) => {
+          const re =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+        };
+
+        const validateInputs = () => {
+          const emailValue = email.value.trim();
+          const passwordValue = password.value.trim();
+
+          if (emailValue === "") {
+            setError(email, "Email is required");
+          } else if (!isValidEmail(emailValue)) {
+            setError(email, "Provide a valid email address");
+          } else {
+            setSuccess(email);
+          }
+
+          if (passwordValue === "") {
+            setError(password, "Password is required");
+          } else if (passwordValue.length < 8) {
+            setError(password, "Password must be at least 8 characters.");
+          } else {
+            setSuccess(password);
+          }
+        };
+
+        // Sign Up Form
+
+        // Similar changes can be applied to the Sign Up form validation
+      });
+
+      // Sign Up Form
+      document.addEventListener("DOMContentLoaded", () => {
+        const signUpForm = document.querySelector(".sign-up-form");
+        const signUpName = document.querySelector("#username");
+        const signUpEmail = document.querySelector("#user-email");
+        const signUpPassword = document.querySelector("#user-password");
+
+        // Validation for Sign Up Form
+        signUpForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // Prevent default form submission
+          validateSignUpInputs(); // Call the validation function
+        });
+
+        const setError = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = message;
+          inputControl.classList.add("form-error");
+          inputControl.classList.remove("form-success");
+        };
+
+        const setSuccess = (element) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = "";
+          inputControl.classList.add("form-success");
+          inputControl.classList.remove("form-error");
+        };
+
+        const isValidEmail = (email) => {
+          const re =
+            /^(([^<>()[]\\.,;:\s@"]+(\.[^<>()[]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+        };
+
+        const validateSignUpInputs = () => {
+          const userNameValue = signUpName.value.trim();
+          const emailValue = signUpEmail.value.trim();
+          const passwordValue = signUpPassword.value.trim();
+
+          // Validate Name
+          if (userNameValue === "") {
+            setError(signUpName, "Name is required");
+          } else {
+            setSuccess(signUpName);
+          }
+
+          // Validate Email
+          if (emailValue === "") {
+            setError(signUpEmail, "Email is required");
+          } else if (!isValidEmail(emailValue)) {
+            setError(signUpEmail, "Provide a valid email address");
+          } else {
+            setSuccess(signUpEmail);
+          }
+
+          // Validate Password
+          if (passwordValue === "") {
+            setError(signUpPassword, "Password is required");
+          } else if (passwordValue.length < 8) {
+            setError(signUpPassword, "Password must be at least 8 characters.");
+          } else {
+            setSuccess(signUpPassword);
+          }
+        };
+      });
+
+      // const counters = document.querySelectorAll(".counter-content .counter");
+      // const container = document.querySelector(".counter-area-section");
+
+      // let activated = false;
+      // window.addEventListener("scroll", () => {
+      //   if (
+      //     pageYOffset > container.offsetTop - container.offsetHeight - 200 &&
+      //     activated === false
+      //   ) {
+      //     counters.forEach((counter) => {
+      //       counter.innerText = 0;
+      //       let count = 0;
+
+      //       function updateCount() {
+      //         const target = parseInt(counter.dataset.count);
+
+      //         if (count < target) {
+      //           count++;
+      //           counter.innerText = count;
+      //           setTimeout(updateCount, 10);
+      //         } else {
+      //           counter.innerText = target;
+      //         }
+      //       }
+
+      //       updateCount();
+      //       activated = true;
+      //     });
+      //   } else if (
+      //     pageYOffset < container.offsetTop - container.offsetHeight - 500 ||
+      //     (pageYOffset === 0 && activated === true)
+      //   ) {
+      //     counters.forEach((counter) => {
+      //       counter.innerText = 0; // Fixed here
+      //     });
+      //     activated = false;
+      //   }
+      // });
+    </script>
   </body>
 </html>

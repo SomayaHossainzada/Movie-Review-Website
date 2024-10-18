@@ -39,10 +39,170 @@
 
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
-
+    <link rel="icon" href="img/favicon.png">
     <title>MOVIEFOREST</title>
   </head>
   <body>
+    <!-- Start Login form popup -->
+    <div class="sign-in-container hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-in-modal">
+              <button class="close-modal_sign_in">&times;</button>
+              <form action="#" method="post" class="sign-form">
+                <h2>Sign In</h2>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="sign-email"
+                    name="sign-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="sign-pass"
+                    name="sign-pass"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="remember"
+                    name="remember"
+                    type="checkbox"
+                    checked
+                  />
+                  <label for="remember">Remember Me</label>
+                </div>
+                <button
+                  class="detail-f-btn sign-f-btn"
+                  type="submit"
+                  onclick="checkLoginFormData()"
+                >
+                  Sign in
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign in with
+                    <i class="fa-brands fa-facebook-f social-icon"></i>
+                  </a>
+
+                  <a class="gl" href="#"
+                    >Sign in with
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+                <span class="sign-text"
+                  >Don't have an account? <a href="#">Sign up!</a></span
+                >
+                <span class="sign-text">
+                  <a href="#">Forgot password?</a>
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End login form popup -->
+    <!-- Start Sign up form popup -->
+    <div class="sign sign-modal hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-up-modal">
+              <button class="close-modal_sign_up">&times;</button>
+              <form action="" method="post" class="sign-up-form">
+                <h2>Sign Up</h2>
+                <div class="detail-f-group">
+                  <label for="sign-name" class="detail-f-label sign-f-label"
+                    >Name</label
+                  >
+                  <input
+                    id="username"
+                    name="user-name"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="user-email"
+                    name="user-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="user-password"
+                    name="user-password"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="policy"
+                    name="policy"
+                    type="checkbox"
+                    checked
+                    required
+                  />
+                  <label for="policy">I agree to the Privacy Policy</label>
+                </div>
+                <button
+                  class="detail-f-btn sign-f-btn"
+                  type="submit"
+                  onclick="saveFormData()"
+                >
+                  Sign up
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign up with
+                    <i class="fa-brands fa-facebook-f social-icon"></i>
+                  </a>
+
+                  <a class="gl" href="#"
+                    >Sign up with
+                    <i class="bi bi-google"></i>
+                  </a>
+                </div>
+                <span class="sign-text"
+                  >Already have an account? <a href="#">Sign In!</a></span
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign up form popup -->
+    <div class="overlay hidden"></div>
+  
     <main>
       <!-- Header Section -->
       <header>
@@ -286,7 +446,7 @@
         <div class="movies-container container">
           <h2>Movies</h2>
           <!-- movies section tabs -->
-          <ul class="nav nav-pills mb-3" id="pills-tab1" role="tablist">
+          <ul class="nav nav-pills mb-4" id="pills-tab1" role="tablist">
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active movie-tab-btn"
@@ -361,7 +521,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
               
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -370,7 +530,7 @@
                     <!-- item2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -379,7 +539,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item5.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -388,7 +548,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item10.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -397,7 +557,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item11.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -406,7 +566,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item12.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -415,7 +575,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -424,7 +584,7 @@
                     <!-- item 8 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -433,7 +593,7 @@
                     <!-- item 9 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -442,7 +602,7 @@
                     <!-- item 10 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider2.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -467,7 +627,7 @@
                     <!-- item 1 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item9.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -476,7 +636,7 @@
                     <!-- item 2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -485,7 +645,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -494,7 +654,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -503,7 +663,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider2.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -512,7 +672,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -521,7 +681,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -547,7 +707,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
               
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -557,7 +717,7 @@
                     <!-- item 2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -567,7 +727,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -577,7 +737,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -587,7 +747,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -596,7 +756,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -605,7 +765,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -614,7 +774,7 @@
                     <!-- item 8 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -641,7 +801,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
               
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -650,7 +810,7 @@
                     <!-- item2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -659,7 +819,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -668,7 +828,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -677,7 +837,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">Action</div>
                         <h4 class="mt-2">Interstellar</h4>
                         <p><i class="fa-solid fa-star"></i> 7.4</p>
@@ -696,7 +856,7 @@
         <div class="series-container container">
           <h2>Series</h2>
           <!-- series section tabs -->
-          <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+          <ul class="nav nav-pills mb-4" id="pills-tab2" role="tablist">
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active movie-tab-btn"
@@ -770,7 +930,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item9.jpg" class="card-img-top" />
 
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -781,7 +941,7 @@
                     <!-- item2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item7.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -792,7 +952,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -803,7 +963,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -814,7 +974,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -825,7 +985,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item12.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -836,7 +996,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -847,7 +1007,7 @@
                     <!-- item 8 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -858,7 +1018,7 @@
                     <!-- item 9 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -869,7 +1029,7 @@
                     <!-- item 10 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider2.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -897,7 +1057,7 @@
                     <!-- item 1 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item9.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -908,7 +1068,7 @@
                     <!-- item 2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -919,7 +1079,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -930,7 +1090,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -941,7 +1101,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider2.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -952,7 +1112,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -963,7 +1123,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -991,7 +1151,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
 
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -1003,7 +1163,7 @@
                     <!-- item 2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item5.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -1015,7 +1175,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item11.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -1027,7 +1187,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -1039,7 +1199,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -1050,7 +1210,7 @@
                     <!-- item 6 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider2.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -1061,7 +1221,7 @@
                     <!-- item 7 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider3.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -1072,7 +1232,7 @@
                     <!-- item 8 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/slider4.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -1101,7 +1261,7 @@
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item4.jpg" class="card-img-top" />
 
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -1112,7 +1272,7 @@
                     <!-- item2 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item1.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item2">
                           Action
                         </div>
@@ -1123,7 +1283,7 @@
                     <!-- item 3 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item5.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item3">
                           Action
                         </div>
@@ -1134,7 +1294,7 @@
                     <!-- item 4 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item10.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item4">
                           Action
                         </div>
@@ -1145,7 +1305,7 @@
                     <!-- item 5 -->
                     <div class="card item card-carousel-box ms-2">
                       <img src="img/mv-item11.jpg" class="card-img-top" />
-                      <div class="movie-info">
+                      <div class="movie-info box-info-movies">
                         <div class="btn px-3 py-1 rounded-2 btn-item1">
                           Action
                         </div>
@@ -1168,69 +1328,62 @@
         <div class="container">
           <div class="row top-rate-row">
             <h2 class="mb-5 pt-2">Top Rated</h2>
-            <div class="col-xs-12 col-md-8" >
-              <video id="videoPlayer" controls muted >
-                <source id="videoSource" src="movie/1. Intro.mp4" type="video/mp4">
-                <!-- <source src="movie.ogg" type="video/ogg"> -->
-              Your browser does not support the video tag.
-              </video>
+            <div class="col-xs-12 col-md-8 my-2 vs-movie-container" >
+              <div class="tab-content" id="content">
+                <iframe id="videoPlayer" src="" allowfullscreen muted></iframe>
+                
+              </div>
             </div>
 
-            <div class="col-xd-12 col-md-4 vs-container">
-              <div class="vertical-slider">
-                <div class="vs-icon vs-icon-hide">
-                  <span class="fa-solid fa-chevron-up vs-top-arrow"></span>
-                  <!-- <span class="left-arrow">&lt;</span> -->
+            <div class="col-xd-12 col-md-4 vs-container my-2">
+              <div class="tab" id="movieTab">
+                <button class="nav-btn" id="prevBtn">
+                  <i class="fa-solid fa-angle-up"></i>
+                </button>
+                <div class="tab-item" data-movie="Movie 1" data-video="https://www.youtube.com/embed/LOeCYXJdHfs">
+                  <img src="img/frozen.jpg" alt="Frozen">
+                  <p class="ps-3">Frozen</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 2" data-video="https://www.youtube.com/embed/TbiPcMCz0Ek">
+                  <img src="img/snow-white.webp" alt="Snow White">
+                  <p class="ps-3">Snow White</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 3" data-video="https://www.youtube.com/embed/WovwAiPF6rE">
+                  <img src="img/harry.jpg" alt="Harry Potter">
+                  <p class="ps-3">Harry Potter</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 4" data-video="https://www.youtube.com/embed/-8Sx6U6Ou0Q">
+                  <img src="img/baby-girl.webp" alt="Baby Girl">
+                    <p class="ps-3">Baby Girl</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 5" data-video="https://www.youtube.com/embed/FaR1mQ2b0Ck">
+                  <img src="img/titanic2.jpg" alt="Titanic 2">
+                    <p class="ps-3">Titanic 2</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 6" data-video="https://www.youtube.com/embed/lq9bYTFf6ts">
+                  <img src="img/evilqueen.jpg" alt="Evil Queen">
+                    <p class="ps-3">evil queen</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 7" data-video="https://www.youtube.com/embed/6LWraeO0sqk">
+                  <img src="img/encanto2.jpeg" alt="ENCANTO 2">
+                    <p class="ps-3">ENCANTO 2</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 8" data-video="https://www.youtube.com/embed/vxCj4ebIP54">
+                  <img src="img/iron-man.webp" alt="Iron Man 4">
+                  <p class="ps-3">Iron Man 4</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 9" data-video="https://www.youtube.com/embed/8358WlxnroA">
+                  <img src="img/28years.jpg" alt="28 years later">
+                  <p class="ps-3">28 years later</p>
+                </div>
+                <div class="tab-item" data-movie="Movie 10" data-video="https://www.youtube.com/embed/I4vpY-wMU6A">
+                  <img src="img/black-panther3.jpg" alt="black panther 3">
+                  <p class="ps-3">black panther 3</p>
                 </div>
                 
-
-                <ul class="vs-tabs" style="background-color:yellow;">
-                  <!-- <li class="vs-tab py-3 px-4 my-1" data-video="video1.mp4">
-                    <img src="img/trailer2.jpg" alt="trailer1">
-                    <p class="ps-3">Wonder Women</p>
-                  </li>
-                  <li class="vs-tab vs-tab-active py-3 px-4 my-1" data-video="video2.mp4">
-                    <img src="img/trailer3.png" alt="trailer2">
-                    <p class="ps-3">Beauty and the Best</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video3.mp4">
-                    <img src="img/trailer4.png" alt="trailer3">
-                    <p class="ps-3">Fast & Furious 8</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video4.mp4">
-                    <img src="img/trailer7.jpg" alt="trailer4">
-                    <p class="ps-3">Logan</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video5.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer5">
-                    <p class="ps-3">Logan2</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video6.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer6">
-                    <p class="ps-3">Logan3</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video7.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer7">
-                    <p class="ps-3">Logan4</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video8.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer8">
-                    <p class="ps-3">Logan5</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video9.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer9">
-                    <p class="ps-3">Logan6</p>
-                  </li>
-                  <li class="vs-tab py-3 px-4 my-1" data-video="video10.mp4">
-                    <img src="img/trailer6.jpg" alt="trailer10">
-                    <p class="ps-3">Logan7</p>
-                  </li> -->
-                </ul>
-
-                <div class="vs-icon">
-                  <span class="fa-solid fa-chevron-down vs-bottom-arrow"></span>
-                  <!-- <span class="right-arrow">&gt;</span> -->
-                </div>
+                <button class="nav-btn" id="nextBtn">
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
               </div>
             </div> 
 
@@ -1326,6 +1479,7 @@
                   <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
                   <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
                 </div>
+                <div class="footer-border"></div>
               </div>
            
             <div class="col-xs-12 col-md-4 col-quick-links links2">
@@ -1337,8 +1491,9 @@
                 <li class="my-2">
                   <i class="fa-solid fa-phone me-5"><span class="ms-2">+ 97533322</span></i>
                 </li>
-                <li class="my-2"><i class="fa-solid fa-envelope me-3"></i><apan>movieforest@gmail.com</apan></li>
+                <li class="my-2"><i class="fa-solid fa-envelope me-3"></i><span>movieforest@gmail.com</span></li>
               </ul>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links3">

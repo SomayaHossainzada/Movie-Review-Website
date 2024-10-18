@@ -43,9 +43,156 @@
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
 
+    <link rel="icon" href="img/favicon.png">
+
     <title>MOVIEFOREST</title>
   </head>
   <body>
+    <!-- Start Login form popup -->
+    <div class="sign-in-container hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-in-modal">
+              <button class="close-modal_sign_in">&times;</button>
+              <form action="#" method="post" class="sign-form">
+                <h2>Sign In</h2>
+                <div class="detail-f-group">
+                  <label for="sign-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="sign-email"
+                    name="sign-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="sign-pass" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="sign-pass"
+                    name="sign-pass"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="remember"
+                    name="remember"
+                    type="checkbox"
+                    checked
+                  />
+                  <label for="remember">Remember Me</label>
+                </div>
+                <button class="detail-f-btn sign-f-btn" type="submit">
+                  Sign in
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign in with
+                    <i class="fa-brands fa-facebook-f social-icon"></i
+                  ></a>
+                  <a class="gl" href="#"
+                    >Sign in with <i class="bi bi-google"></i
+                  ></a>
+                </div>
+                <span class="sign-text"
+                  >Don't have an account? <a href="#">Sign up!</a></span
+                >
+                <span class="sign-text"><a href="#">Forgot password?</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End login form popup -->
+    <!-- Start Sign Up form popup -->
+    <div class="sign sign-modal hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sign-up-modal">
+              <button class="close-modal_sign_up">&times;</button>
+              <form action="#" method="post" class="sign-up-form">
+                <h2>Sign Up</h2>
+                <div class="detail-f-group">
+                  <label for="username" class="detail-f-label sign-f-label"
+                    >Name</label
+                  >
+                  <input
+                    id="username"
+                    name="user-name"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="user-email" class="detail-f-label sign-f-label"
+                    >Email</label
+                  >
+                  <input
+                    id="user-email"
+                    name="user-email"
+                    type="text"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group">
+                  <label for="user-password" class="detail-f-label sign-f-label"
+                    >Password</label
+                  >
+                  <input
+                    id="user-password"
+                    name="user-password"
+                    type="password"
+                    class="sign-f-input add-f-input"
+                  />
+                  <div class="form-error"></div>
+                </div>
+                <div class="detail-f-group group-checkbox">
+                  <input
+                    id="policy"
+                    name="policy"
+                    type="checkbox"
+                    checked
+                    required
+                  />
+                  <label for="policy">I agree to the Privacy Policy</label>
+                </div>
+                <button class="detail-f-btn sign-f-btn" type="submit">
+                  Sign up
+                </button>
+                <span class="sign-delimiter">or</span>
+                <div class="sign-social">
+                  <a class="fb" href="#"
+                    >Sign up with
+                    <i class="fa-brands fa-facebook-f social-icon"></i
+                  ></a>
+                  <a class="gl" href="#"
+                    >Sign up with <i class="bi bi-google"></i
+                  ></a>
+                </div>
+                <span class="sign-text"
+                  >Already have an account? <a href="#">Sign In!</a></span
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Up form popup -->
+    <div class="overlay hidden"></div>
     <main>
       <!-- Header Section -->
       <header>
@@ -90,12 +237,17 @@
                 ></button>
               </div>
               <!-- Sidebar Body -->
-              <div class="offcanvas-body d-flex flex-column flex-lg-row py-4">
+              <div
+                class="offcanvas-body d-flex flex-column flex-lg-row py-4"
+              >
                 <ul
                   class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
                 >
                   <li class="nav-item mx-2">
-                    <a class="nav-link" aria-current="page" href="index.html"
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="index.html"
                       >HOME</a
                     >
                   </li>
@@ -121,7 +273,9 @@
                   class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
                 >
                   <a href="#" class="login-btn">LOG IN</a>
-                  <a href="#" class="signup-btn px-4 py-2 rounded-2">SIGN UP</a>
+                  <a href="#" class="signup-btn px-4 py-2 rounded-2"
+                    >SIGN UP</a
+                  >
                 </div>
               </div>
             </div>
@@ -129,7 +283,6 @@
         </nav>
         <!-- Navbar ends -->
       </header>
-
       <section class="hero-section">
         <div class="container">
           <div class="row contact-content">
@@ -198,52 +351,129 @@
             <div class="col-md-7">
               <h3 class="contact-form-title">Get In Touch</h3>
               <p class="contact-form-subtitle">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page randomised words which don't
-                look even slightly when looking at its layout.
+                It is a long established fact that a reader will be
+                distracted by the readable content of a page randomised
+                words which don't look even slightly when looking at its
+                layout.
               </p>
-              <form method="post" action="#">
+              <form method="post" action="#" id="contactForm">
                 <div class="row">
                   <div class="col-md-5">
                     <input
                       type="text"
+                      id="name"
                       placeholder="Your Name"
                       class="input-contact-form"
-                      required
                     />
+                    <div id="nameError" class="error"></div>
                   </div>
                   <div class="col-md-7">
                     <input
-                      type="email"
+                      type="text"
+                      id="email"
                       placeholder="Your Email"
                       class="input-contact-form"
-                      required
                     />
+                    <div id="emailError" class="error"></div>
                   </div>
                 </div>
-
                 <div>
                   <input
                     type="text"
+                    id="subject"
                     placeholder="Your Subject"
                     class="input-contact-form"
-                    required
                   />
+                  <div id="subjectError" class="error"></div>
                 </div>
                 <div>
                   <textarea
+                    id="message"
                     cols="30"
                     rows="5"
                     placeholder="Write Your Message"
                     class="input-contact-form"
-                    required
                   ></textarea>
+                  <div id="messageError" class="error"></div>
                 </div>
                 <button type="submit" class="contact-form-btn">
                   Send Message
                   <i class="fa-solid fa-paper-plane send-btn-icon"></i>
                 </button>
               </form>
+
+              <script>
+                document
+                  .getElementById("contactForm")
+                  .addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    // Clear previous error messages
+                    document.getElementById("nameError").textContent = "";
+                    document.getElementById("emailError").textContent = "";
+                    document.getElementById("subjectError").textContent =
+                      "";
+                    document.getElementById("messageError").textContent =
+                      "";
+
+                    // Validation flags
+                    let isValid = true;
+
+                    // Get form values
+                    const name = document
+                      .getElementById("name")
+                      .value.trim();
+                    const email = document
+                      .getElementById("email")
+                      .value.trim();
+                    const subject = document
+                      .getElementById("subject")
+                      .value.trim();
+                    const message = document
+                      .getElementById("message")
+                      .value.trim();
+
+                    // Validate Name
+                    if (name === "") {
+                      document.getElementById("nameError").textContent =
+                        "Name is required";
+                      isValid = false;
+                    }
+
+                    // Validate Email
+                    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                    if (email === "") {
+                      document.getElementById("emailError").textContent =
+                        "Email is required";
+                      isValid = false;
+                    } else if (!emailPattern.test(email)) {
+                      document.getElementById("emailError").textContent =
+                        "Invalid email format";
+                      isValid = false;
+                    }
+
+                    // Validate Subject
+                    if (subject === "") {
+                      document.getElementById("subjectError").textContent =
+                        "Subject is required";
+                      isValid = false;
+                    }
+
+                    // Validate Message
+                    if (message === "") {
+                      document.getElementById("messageError").textContent =
+                        "Message is required";
+                      isValid = false;
+                    }
+
+                    // If form is valid, submit
+                    if (isValid) {
+                      alert("Form submitted successfully!");
+                      // You can proceed to submit the form data to the server here
+                      // document.getElementById("contactForm").submit(); // Uncomment to actually submit
+                    }
+                  });
+              </script>
             </div>
           </div>
         </div>
@@ -260,7 +490,6 @@
         ></iframe>
       </section>
     </main>
-
     <footer>
       <div class="footer-links">
         <div class="container">
@@ -272,6 +501,7 @@
                 <i class="fa-brands fa-x-twitter mx-sm-1 social-icon"></i>
                 <i class="fa-brands fa-youtube mx-sm-1 social-icon"></i>
               </div>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links2">
@@ -288,9 +518,10 @@
                 </li>
                 <li class="my-2">
                   <i class="fa-solid fa-envelope me-3"></i
-                  ><apan>movieforest@gmail.com</apan>
+                  ><span>movieforest@gmail.com</span>
                 </li>
               </ul>
+              <div class="footer-border"></div>
             </div>
 
             <div class="col-xs-12 col-md-4 col-quick-links links3">
@@ -336,5 +567,180 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signInContainer = document.querySelector(".sign-in-container");
+        const signModal = document.querySelector(".sign-modal");
+        const overlay = document.querySelector(".overlay");
+        const closeModalSignIn = document.querySelector(".close-modal_sign_in");
+        const closeModalSignUp = document.querySelector(".close-modal_sign_up");
+        const signInBtn = document.querySelector(".login-btn");
+        const signUpBtn = document.querySelector(".signup-btn");
+
+        if (!signInBtn || !signUpBtn) {
+          console.error("Sign-in or Sign-up button not found!");
+          return; // Exit if buttons are missing
+        }
+
+        const toggleModal = (modal, action) => {
+          modal.classList[action]("hidden");
+          overlay.classList[action]("hidden");
+        };
+
+        signInBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          toggleModal(signInContainer, "remove");
+        });
+
+        signUpBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          toggleModal(signModal, "remove");
+        });
+
+        closeModalSignIn.addEventListener("click", () =>
+          toggleModal(signInContainer, "add")
+        );
+        closeModalSignUp.addEventListener("click", () =>
+          toggleModal(signModal, "add")
+        );
+
+        overlay.addEventListener("click", () => {
+          toggleModal(signInContainer, "add");
+          toggleModal(signModal, "add");
+        });
+
+        // Validation form check
+        const form = document.querySelector(".sign-form"); // Fixed selector
+        const email = document.querySelector("#sign-email");
+        const password = document.querySelector("#sign-pass");
+
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default form submission
+            validateInputs(); // Call the validation function
+          });
+        } else {
+          console.error("Sign-in form not found!");
+        }
+
+        const setError = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = message;
+          inputControl.classList.add("form-error");
+          inputControl.classList.remove("form-success");
+        };
+
+        const setSuccess = (element) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = "";
+          inputControl.classList.add("form-success");
+          inputControl.classList.remove("form-error");
+        };
+
+        const isValidEmail = (email) => {
+          const re =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+        };
+
+        const validateInputs = () => {
+          const emailValue = email.value.trim();
+          const passwordValue = password.value.trim();
+
+          if (emailValue === "") {
+            setError(email, "Email is required");
+          } else if (!isValidEmail(emailValue)) {
+            setError(email, "Provide a valid email address");
+          } else {
+            setSuccess(email);
+          }
+
+          if (passwordValue === "") {
+            setError(password, "Password is required");
+          } else if (passwordValue.length < 8) {
+            setError(password, "Password must be at least 8 characters.");
+          } else {
+            setSuccess(password);
+          }
+        };
+
+        // Sign Up Form
+
+        // Similar changes can be applied to the Sign Up form validation
+      });
+
+      // Sign Up Form
+      document.addEventListener("DOMContentLoaded", () => {
+        const signUpForm = document.querySelector(".sign-up-form");
+        const signUpName = document.querySelector("#username");
+        const signUpEmail = document.querySelector("#user-email");
+        const signUpPassword = document.querySelector("#user-password");
+
+        // Validation for Sign Up Form
+        signUpForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // Prevent default form submission
+          validateSignUpInputs(); // Call the validation function
+        });
+
+        const setError = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = message;
+          inputControl.classList.add("form-error");
+          inputControl.classList.remove("form-success");
+        };
+
+        const setSuccess = (element) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector(".form-error");
+
+          errorDisplay.innerText = "";
+          inputControl.classList.add("form-success");
+          inputControl.classList.remove("form-error");
+        };
+
+        const isValidEmail = (email) => {
+          const re =
+            /^(([^<>()[]\\.,;:\s@"]+(\.[^<>()[]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+        };
+
+        const validateSignUpInputs = () => {
+          const userNameValue = signUpName.value.trim();
+          const emailValue = signUpEmail.value.trim();
+          const passwordValue = signUpPassword.value.trim();
+
+          // Validate Name
+          if (userNameValue === "") {
+            setError(signUpName, "Name is required");
+          } else {
+            setSuccess(signUpName);
+          }
+
+          // Validate Email
+          if (emailValue === "") {
+            setError(signUpEmail, "Email is required");
+          } else if (!isValidEmail(emailValue)) {
+            setError(signUpEmail, "Provide a valid email address");
+          } else {
+            setSuccess(signUpEmail);
+          }
+
+          // Validate Password
+          if (passwordValue === "") {
+            setError(signUpPassword, "Password is required");
+          } else if (passwordValue.length < 8) {
+            setError(signUpPassword, "Password must be at least 8 characters.");
+          } else {
+            setSuccess(signUpPassword);
+          }
+        };
+      });
+    </script>
   </body>
 </html>
