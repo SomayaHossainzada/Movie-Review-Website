@@ -1890,8 +1890,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .admin-header-btn span:nth-child(3) {
   top: 16px;
 }
-
-/* .admin-header-btn-active span {
+/* active sidebar btn */
+.admin-header-btn-active span {
   background-color: #f9d206;
 }
 
@@ -1907,7 +1907,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .admin-header-btn-active span:nth-child(3) {
   top: 8px;
   transform: rotate(-45deg);
-} */
+}
 
 /* Sidebar */
 .admin-sidebar {

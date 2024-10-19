@@ -414,6 +414,37 @@
 
           crewContainer.appendChild(crewMemberDiv);
         });
+
+      // Sidebar
+
+      const sidebarBtn = document.querySelector(".admin-header-btn");
+      const sidebar = document.querySelector(".admin-sidebar");
+
+      sidebarBtn.addEventListener("click", function () {
+        sidebarBtn.classList.toggle("admin-header-btn-active");
+        if (sidebarBtn.classList.contains("admin-header-btn-active")) {
+          sidebar.style.transform = "translateX(0)";
+        } else {
+          sidebar.style.transform = "translateX(-100%)";
+        }
+      });
+
+      // Function to handle window resize
+      function handleResize() {
+        if (window.innerWidth >= 1200) {
+          sidebar.style.transform = "translateX(0)";
+          sidebarBtn.classList.remove("admin-header-btn-active");
+        } else {
+          sidebar.style.transform = "translateX(-100%)";
+          sidebarBtn.classList.remove("admin-header-btn-active");
+        }
+      }
+
+      // Initial check
+      handleResize();
+
+      // Add event listener for window resize
+      window.addEventListener("resize", handleResize);
     </script>
   </body>
 </html>

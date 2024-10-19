@@ -93,8 +93,6 @@ $(".movie-carousel").owlCarousel({
   },
 });
 
-
-
 const signInContainer = document.querySelector(".sign-in-container");
 const signModal = document.querySelector(".sign-modal");
 const overlay = document.querySelector(".overlay");
