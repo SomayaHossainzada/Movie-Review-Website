@@ -560,12 +560,12 @@ window.addEventListener("scroll", () => {
           };
   
           signInBtn.addEventListener("click", (event) => {
-              event.preventDefault(); // Prevent default link behavior
+              event.preventDefault(); 
               toggleModal(signInContainer, "remove");
           });
   
           signUpBtn.addEventListener("click", (event) => {
-              event.preventDefault(); // Prevent default link behavior
+              event.preventDefault(); 
               toggleModal(signModal, "remove");
           });
   
@@ -579,13 +579,13 @@ window.addEventListener("scroll", () => {
       });
 
       // Validation form check
-const form = document.querySelector(".sign-form"); // Fixed selector
+const form = document.querySelector(".sign-form"); 
 const email = document.querySelector("#sign-email");
 const password = document.querySelector("#sign-pass");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent default form submission
-  validateInputs(); // Call the validation function
+  e.preventDefault(); 
+  validateInputs(); 
 });
 
 const setError = (element, message) => {
@@ -594,7 +594,7 @@ const setError = (element, message) => {
 
   errorDisplay.innerText = message;
   inputControl.classList.add("form-error");
-  inputControl.classList.remove("form-success"); // Corrected spelling
+  inputControl.classList.remove("form-success"); 
 };
 
 const setSuccess = (element) => {
@@ -602,7 +602,7 @@ const setSuccess = (element) => {
   const errorDisplay = inputControl.querySelector(".form-error");
 
   errorDisplay.innerText = "";
-  inputControl.classList.add("form-success"); // Ensure class names are consistent
+  inputControl.classList.add("form-success"); 
   inputControl.classList.remove("form-error");
 };
 

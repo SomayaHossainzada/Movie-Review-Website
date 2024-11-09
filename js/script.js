@@ -158,8 +158,8 @@ function checkLoginFormData() {
   let user_record = JSON.parse(localStorage.getItem("users")) || [];
 
   // Check for admin credentials stored in localStorage
-  let adminEmail = "ahmadi";
-  let adminPassword = "123";
+  let adminEmail = "saraahmadi@gmail.com";
+  let adminPassword = "12345678";
 
   // Check if the entered email and password match the admin credentials
   if (email === adminEmail && password === adminPassword) {
@@ -192,13 +192,13 @@ function logout() {
 }
 
 // Validation form check
-const form = document.querySelector(".sign-form"); // Fixed selector
+const form = document.querySelector(".sign-form");
 const email = document.querySelector("#sign-email");
 const password = document.querySelector("#sign-pass");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent default form submission
-  validateInputs(); // Call the validation function
+  e.preventDefault();
+  validateInputs();
 });
 
 const setError = (element, message) => {
@@ -207,7 +207,7 @@ const setError = (element, message) => {
 
   errorDisplay.innerText = message;
   inputControl.classList.add("form-error");
-  inputControl.classList.remove("form-success"); // Corrected spelling
+  inputControl.classList.remove("form-success");
 };
 
 const setSuccess = (element) => {
@@ -215,7 +215,7 @@ const setSuccess = (element) => {
   const errorDisplay = inputControl.querySelector(".form-error");
 
   errorDisplay.innerText = "";
-  inputControl.classList.add("form-success"); // Ensure class names are consistent
+  inputControl.classList.add("form-success");
   inputControl.classList.remove("form-error");
 };
 
@@ -371,10 +371,8 @@ const nextBtn = document.getElementById("nextBtn");
 let currentIndex = 0;
 
 function updateTabs() {
-  // Hide all items
   tabItems.forEach((item) => (item.style.display = "none"));
 
-  // Show the selected item at the top
   tabItems[currentIndex].style.display = "flex";
   tabItems[currentIndex].classList.add("selected");
 
@@ -405,10 +403,9 @@ prevBtn.addEventListener("click", () => {
 // Click event for tab items
 tabItems.forEach((item, index) => {
   item.addEventListener("click", () => {
-    currentIndex = index; // Set current index to the clicked item
+    currentIndex = index;
     updateTabs();
   });
 });
 
-// Initialize the tabs
 updateTabs();

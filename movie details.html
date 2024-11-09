@@ -204,25 +204,79 @@
 
                            <!-- form -->
                               
-                          <div class="form-container">
+                           <div class="form-container">
                             <h4 class="from-h2">Leave A Comment</h4>
-                            <form>
+                            <form id="commentForm">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Your name" required>
-                                    <input type="email" placeholder="Your email" required>
+                                    <input type="text" placeholder="Your name" name="name" required>
+                                    <input type="email" placeholder="Your email" name="email" required>
                                 </div>
                                 <div class="comment-group">
-                                    <textarea placeholder="Your comment" required></textarea>
+                                    <textarea  name="comment" placeholder="Your comment" required></textarea>
                                 </div>
                                 <img src="img/send.png" width="20px" class="send-icon">
                                 <button type="submit" class="submit-button">POST COMMENT</button>
                                 
                             </form>
-                        </div>
+      
+                     <ul style="color: #fff">
+                      <li id="name"></li>
+                       <li id="email"></li>
+                     <li id="comment"></li>
+                    </ul>
+       
+                      </div>
+
+
+
+
                           </section>
 
 
 
+
+
+
+
+    <script>
+             
+      
+             
+    const comments = [];
+    const commentForm = document.getElementById('commentForm');
+    const commentsList = document.getElementById('commentsList');
+
+    
+    commentForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+   
+        const newComment = {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            comment: event.target.comment.value
+        };
+         console.log(newComment)
+
+        comments.push(newComment);
+
+         
+        displayComments(newComment);
+
+        commentForm.reset();
+    });
+
+    function displayComments(comment) {
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const yourcomment = document.getElementById("comment");
+      name.innerText = comment.name;
+      email.innerText = comment.email;
+      yourcomment.innerHTML= comment.comment;
+    }
+
+    </script>
+
+                         
 
                     
                        

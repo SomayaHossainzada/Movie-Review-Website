@@ -42,8 +42,8 @@
 
     <!-- Css link -->
     <link rel="stylesheet" href="style/style.css" />
-    
-    <link rel="icon" href="img/favicon.png">
+
+    <link rel="icon" href="img/favicon.png" />
 
     <title>MOVIEFOREST</title>
   </head>
@@ -682,7 +682,7 @@
 
         if (!signInBtn || !signUpBtn) {
           console.error("Sign-in or Sign-up button not found!");
-          return; // Exit if buttons are missing
+          return; 
         }
 
         const toggleModal = (modal, action) => {
@@ -713,14 +713,14 @@
         });
 
         // Validation form check
-        const form = document.querySelector(".sign-form"); // Fixed selector
+        const form = document.querySelector(".sign-form"); 
         const email = document.querySelector("#sign-email");
         const password = document.querySelector("#sign-pass");
 
         if (form) {
           form.addEventListener("submit", (e) => {
-            e.preventDefault(); // Prevent default form submission
-            validateInputs(); // Call the validation function
+            e.preventDefault(); 
+            validateInputs(); 
           });
         } else {
           console.error("Sign-in form not found!");
@@ -770,10 +770,6 @@
             setSuccess(password);
           }
         };
-
-        // Sign Up Form
-
-        // Similar changes can be applied to the Sign Up form validation
       });
 
       // Sign Up Form
@@ -785,8 +781,8 @@
 
         // Validation for Sign Up Form
         signUpForm.addEventListener("submit", (e) => {
-          e.preventDefault(); // Prevent default form submission
-          validateSignUpInputs(); // Call the validation function
+          e.preventDefault(); 
+          validateSignUpInputs(); 
         });
 
         const setError = (element, message) => {
@@ -845,44 +841,46 @@
         };
       });
 
-      // const counters = document.querySelectorAll(".counter-content .counter");
-      // const container = document.querySelector(".counter-area-section");
+      // Counter
 
-      // let activated = false;
-      // window.addEventListener("scroll", () => {
-      //   if (
-      //     pageYOffset > container.offsetTop - container.offsetHeight - 200 &&
-      //     activated === false
-      //   ) {
-      //     counters.forEach((counter) => {
-      //       counter.innerText = 0;
-      //       let count = 0;
+      const counters = document.querySelectorAll(".counter-content .counter");
+      const container = document.querySelector(".counter-area-section");
 
-      //       function updateCount() {
-      //         const target = parseInt(counter.dataset.count);
+      let activated = false;
+      window.addEventListener("scroll", () => {
+        if (
+          pageYOffset > container.offsetTop - container.offsetHeight - 200 &&
+          activated === false
+        ) {
+          counters.forEach((counter) => {
+            counter.innerText = 0;
+            let count = 0;
 
-      //         if (count < target) {
-      //           count++;
-      //           counter.innerText = count;
-      //           setTimeout(updateCount, 10);
-      //         } else {
-      //           counter.innerText = target;
-      //         }
-      //       }
+            function updateCount() {
+              const target = parseInt(counter.dataset.count);
 
-      //       updateCount();
-      //       activated = true;
-      //     });
-      //   } else if (
-      //     pageYOffset < container.offsetTop - container.offsetHeight - 500 ||
-      //     (pageYOffset === 0 && activated === true)
-      //   ) {
-      //     counters.forEach((counter) => {
-      //       counter.innerText = 0; // Fixed here
-      //     });
-      //     activated = false;
-      //   }
-      // });
+              if (count < target) {
+                count++;
+                counter.innerText = count;
+                setTimeout(updateCount, 10);
+              } else {
+                counter.innerText = target;
+              }
+            }
+
+            updateCount();
+            activated = true;
+          });
+        } else if (
+          pageYOffset < container.offsetTop - container.offsetHeight - 500 ||
+          (pageYOffset === 0 && activated === true)
+        ) {
+          counters.forEach((counter) => {
+            counter.innerText = 0; 
+          });
+          activated = false;
+        }
+      });
     </script>
   </body>
 </html>

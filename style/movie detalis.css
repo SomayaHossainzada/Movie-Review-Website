@@ -28,7 +28,7 @@
 .play-icon {
   width: 65px;
   cursor: pointer;
-  margin-left: 225px;
+  margin-left: 253px;
   margin-top: 60px;
 }
 
@@ -123,7 +123,6 @@ button{
 }
 
 .second-hr {
-  background: #DCF836;
   width: 98px;
   border: none;
   height: 2px;
@@ -202,7 +201,7 @@ p{
 }
 
 .img-like {
-  width: 20px;
+  width: 20px;  
   margin: 8px;
 }
 
